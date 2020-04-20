@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "lit=true": { "model": "minestrapp:block/candle" },
+        "lit=false": { "model": "minestrapp:block/candle" }
+    }
+}

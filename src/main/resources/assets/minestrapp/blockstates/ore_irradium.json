@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": [
+            { "model": "minestrapp:block/ore_irradium_stone" }
+        ]
+    }
+}

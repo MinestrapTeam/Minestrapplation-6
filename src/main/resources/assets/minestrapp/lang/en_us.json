@@ -1,0 +1,59 @@
+{
+  "block.minestrapp.redrock": "Redrock",
+"block.minestrapp.deep_redrock": "Deep Redrock",
+"block.minestrapp.deepstone": "Deepstone",
+"block.minestrapp.coldstone": "Coldstone",
+"block.minestrapp.deep_coldstone": "Deep Coldstone",
+"block.minestrapp.icestone": "Icestone",
+"block.minestrapp.glacierrock": "Glacier Rock",
+"block.minestrapp.oceanstone": "Oceanstone",
+"block.minestrapp.deep_oceanstone": "Deep Oceanstone",
+
+  "block.minestrapp.ore_tin": "Tin Ore",
+  "block.minestrapp.ore_titanium": "Titanium Ore",
+  "block.minestrapp.ore_copper": "Copper Ore",
+  "block.minestrapp.ore_meurodite": "Meurodite Ore",
+  "block.minestrapp.ore_torite": "Torite Ore",
+  "block.minestrapp.ore_salt": "Salt Ore",
+  "block.minestrapp.ore_irradium": "Irradium Ore",
+
+"block.minestrapp.dried_mud": "Dried Mud",
+"block.minestrapp.mud": "Mud",
+  "block.minestrapp.cold_sand": "Cold Sand",
+  "block.minestrapp.cold_red_sand": "Cold Redsand",
+
+  "block.minestrapp.crop_pepper": "Pepper Plant",
+  "block.minestrapp.crop_cabbage": "Cabbage Plant",
+  "block.minestrapp.crop_celery": "Celery Plant",
+  "block.minestrapp.crop_lettuce": "Lettuce Plant",
+  "block.minestrapp.crop_onion": "Onion Plant",
+  "block.minestrapp.crop_peanuts": "Peanut Plant",
+  "block.minestrapp.crop_tomato": "Tomato Plant",
+  "block.minestrapp.crop_corn": "Corn Plant",
+
+
+  "block.minestrapp.mite_honey": "Mite Honey",
+  "block.minestrapp.godstone": "Godstone",
+  "block.minestrapp.candle": "Candle",
+
+
+"item.minestrapp.pepper": "Pepper",
+"item.minestrapp.cabbage": "Cabbage",
+"item.minestrapp.celery": "Celery",
+"item.minestrapp.lettuce": "Lettuce",
+"item.minestrapp.onion": "Onion",
+"item.minestrapp.peanuts": "Peanuts",
+"item.minestrapp.tomato": "Tomato",
+"item.minestrapp.corn": "Corn",
+"item.minestrapp.pbj": "PBJ",
+"item.minestrapp.dry_spaghetti": "Dry Spaghetti",
+
+"item.minestrapp.pepper_seeds": "Pepper Seeds",
+"item.minestrapp.cabbage_seeds": "Cabbage Seeds",
+"item.minestrapp.celery_seeds": "Celery Seeds",
+"item.minestrapp.tomato_seeds": "Tomato Seeds",
+
+  "item.minestrapp.tallow": "Tallow",
+
+"itemGroup.Minestrappolation": "Minestrappolation"
+}

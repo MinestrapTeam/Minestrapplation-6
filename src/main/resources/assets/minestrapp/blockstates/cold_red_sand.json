@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": [
+            { "model": "minestrapp:block/cold_red_sand" }
+        ]
+    }
+}

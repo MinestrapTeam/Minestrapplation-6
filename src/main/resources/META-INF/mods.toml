@@ -1,0 +1,10 @@
+modLoader="javafml" #mandatory
+loaderVersion="[25,)"
+
+[[mods]]
+modId="minestrapp"
+version="${version}"
+displayName="Minetrappolation"
+description='''
+A vanilla overhaul
+'''
