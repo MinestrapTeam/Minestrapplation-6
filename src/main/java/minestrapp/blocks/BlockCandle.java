@@ -6,6 +6,8 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.client.renderer.color.IBlockColor;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.DyeItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.state.BooleanProperty;
@@ -32,6 +34,8 @@ public class BlockCandle extends Block implements ITileEntityProvider {
 
     public static final BooleanProperty LIT = BooleanProperty.create("lit");
 
+    public int increment = 5;
+
     public BlockCandle(Block.Properties prop){
         super(prop);
         this.setDefaultState(this.getStateContainer().getBaseState().with(LIT, Boolean.valueOf(false)));
@@ -41,17 +45,34 @@ public class BlockCandle extends Block implements ITileEntityProvider {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult p_225533_6_){
         TileEntityCandle candle = (TileEntityCandle) worldIn.getTileEntity(pos);
 
-        if(player.getHeldItem(handIn).getItem() == Items.RED_DYE){
-            candle.addColor(5, 0,0);
-        }
-        if(player.getHeldItem(handIn).getItem() == Items.GREEN_DYE){
-            candle.addColor(0, 5,0);
-        }
-        if(player.getHeldItem(handIn).getItem() == Items.BLUE_DYE){
-            candle.addColor(0, 0,5);
+        Item heldItem = player.getHeldItem(handIn).getItem();
+
+
+        //TODO figure out why crouch right click doesnt work when holding item -- also see the Events class
+        if(player.isCrouching()){
+            System.out.println("Crouching");
+            if(heldItem instanceof DyeItem){
+                DyeItem dye = (DyeItem) heldItem;
+                candle.setColor(new Color(dye.getDyeColor().getColorValue()));
+            }
+        } else {
+            if(heldItem == Items.RED_DYE){
+                candle.addColor(increment, 0,0);
+            }
+            if(heldItem == Items.GREEN_DYE){
+                candle.addColor(0, increment,0);
+            }
+            if(heldItem == Items.BLUE_DYE){
+                candle.addColor(0, 0,increment);
+            }
+            if(heldItem == Items.WHITE_DYE){
+                candle.setColor(255,255,255);
+            }
         }
 
-        if(player.getHeldItem(handIn).getItem() == Items.FLINT_AND_STEEL){
+
+
+        if(heldItem == Items.FLINT_AND_STEEL){
            worldIn.setBlockState(pos, state.with(LIT, Boolean.valueOf(true)), 2);
         }
 

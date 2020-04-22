@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "minestrapp:block/slab_deepstone" },
+        "type=top": { "model": "minestrapp:block/slab_deepstone_top" },
+        "type=double": { "model": "minestrapp:block/slab_deepstone_double" }
+    }
+}

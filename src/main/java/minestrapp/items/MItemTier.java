@@ -11,7 +11,31 @@ public enum MItemTier implements IItemTier {
 
     COPPER(1, 200,5F, 1.5F,17, () ->{
         return Ingredient.fromTag(Tags.Items.INGOTS_IRON);
+    }),
+    BRONZE(2, 1000,5F, 1.5F,13, () ->{
+        return Ingredient.fromTag(Tags.Items.INGOTS_IRON);
+    }),
+    STEEL(2, 500,7.5F, 2.5F,19, () ->{
+        return Ingredient.fromTag(Tags.Items.INGOTS_IRON);
+    }),
+    MEURODITE(2, 906,7F, 2.5F,16, () ->{
+        return Ingredient.fromTag(Tags.Items.INGOTS_IRON);
+    }),
+    TORITE(2, 1200,7F, 3.5F,30, () ->{
+        return Ingredient.fromTag(Tags.Items.INGOTS_IRON);
+    }),
+    BLAZIUM(2, 960,7.5F, 3F,22, () ->{
+        return Ingredient.fromTag(Tags.Items.INGOTS_IRON);
+    }),
+    GLACIERITE(3, 1400,8F, 8F,34, () ->{
+        return Ingredient.fromTag(Tags.Items.INGOTS_IRON);
+    }),
+    BEDROCK(4, 6244,6F, 1.5F,6, () ->{
+        return Ingredient.fromTag(Tags.Items.INGOTS_IRON);
     });
+
+
+
 
     private final int harvestLevel;
     private final int maxUses;

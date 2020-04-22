@@ -20,7 +20,6 @@ public class ClientProxy extends ServerProxy{
 		RenderTypeLookup.setRenderLayer(MBlocks.crop_pepper, RenderType.getCutoutMipped());
 		RenderTypeLookup.setRenderLayer(MBlocks.crop_tomato, RenderType.getCutoutMipped());
 
-
 		RenderTypeLookup.setRenderLayer(MBlocks.godstone, RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(MBlocks.mite_honey, RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(MBlocks.candle, RenderType.getCutout());

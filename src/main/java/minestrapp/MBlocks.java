@@ -4,6 +4,7 @@ import minestrapp.blocks.*;
 import minestrapp.blocks.crops.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.CropsBlock;
+import net.minecraft.block.SlabBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -23,7 +24,7 @@ public class MBlocks {
 	
 	public static List<Block> blocks = new ArrayList<Block>();
 
-	// Stone and Ore
+	// Stones
 	public static Block redrock;
 	public static Block deep_redrock;
 	public static Block deepstone;
@@ -34,6 +35,12 @@ public class MBlocks {
 	public static Block oceanstone;
 	public static Block deep_oceanstone;
 
+
+	//Slabs
+	public static Block slab_deepstone;
+
+
+	//Ores
 	public static Block ore_tin;
 	public static Block ore_titanium;
 	public static Block ore_copper;
@@ -74,6 +81,8 @@ public class MBlocks {
 		registerBlock(glacierrock = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "glacierrock"));
 		registerBlock(oceanstone = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "oceanstone"));
 		registerBlock(deep_oceanstone = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "deep_oceanstone"));
+
+		registerBlock(slab_deepstone = new SlabBlock(Block.Properties.create(Material.ROCK)).setRegistryName(Reference.id, "slab_deepstone"));
 
 		registerBlock(ore_tin = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_tin"));
 		registerBlock(ore_titanium = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_titanium"));

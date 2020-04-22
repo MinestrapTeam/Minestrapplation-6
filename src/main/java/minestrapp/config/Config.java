@@ -24,21 +24,24 @@ public class Config {
     public static ForgeConfigSpec COMMON_CONFIG;
     public static ForgeConfigSpec CLIENT_CONFIG;
 
-
-    public static ForgeConfigSpec.BooleanValue TEST;
-
     public static ForgeConfigSpec.BooleanValue GEN_COPPER;
     public static ForgeConfigSpec.IntValue GEN_COPPER_VEIN_SIZE;
+    public static ForgeConfigSpec.BooleanValue GEN_TIN;
+    public static ForgeConfigSpec.IntValue GEN_TIN_VEIN_SIZE;
+
+    public static ForgeConfigSpec.DoubleValue MAX_STARTING_HEALTH;
 
     static {
         COMMON_BUILDER.comment("General Settings").push(CAT_GENERAL);
-        TEST = COMMON_BUILDER.comment("Test setting").define("testing", false);
+        MAX_STARTING_HEALTH = COMMON_BUILDER.comment("Starting health").defineInRange("health", 10D, 2D, 40D);
         COMMON_BUILDER.pop();
 
         COMMON_BUILDER.comment("World Generation Settings").push(CAT_WORLD);
         COMMON_BUILDER.comment("Ores").push(SUBCAT_ORE);
         GEN_COPPER = COMMON_BUILDER.comment("Should the world contain copper?").define("copper", true);
         GEN_COPPER_VEIN_SIZE = COMMON_BUILDER.comment("Copper vein size.").defineInRange("copper_vein", 5, 1, 50);
+        GEN_TIN = COMMON_BUILDER.comment("Should the world contain tin?").define("tin", true);
+        GEN_TIN_VEIN_SIZE = COMMON_BUILDER.comment("Tin vein size.").defineInRange("tin_vein", 5, 1, 50);
         COMMON_BUILDER.pop();
 
         COMMON_CONFIG = COMMON_BUILDER.build();

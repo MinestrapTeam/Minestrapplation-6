@@ -1,5 +1,6 @@
 package minestrapp;
 
+import minestrapp.items.ItemHealthContainer;
 import minestrapp.items.MFoods;
 import minestrapp.items.MItemTier;
 import net.minecraft.item.*;
@@ -24,6 +25,12 @@ public class MItems {
 	public static Item shovel_copper;
 	public static Item hoe_copper;
 	public static Item sword_copper;
+	public static Item pickaxe_bronze;
+	public static Item axe_bronze;
+	public static Item shovel_bronze;
+	public static Item hoe_bronze;
+	public static Item sword_bronze;
+
 
 	//Food and Seeds
 	public static Item cabbage;
@@ -41,14 +48,20 @@ public class MItems {
 
 	//Misc
 	public static Item tallow;
+	public static Item health_container;
 
 	static {
-		//Tools
+		//Tools //TODO implement Minestrapp tool items instead of using vanilla
 		registerItem(pickaxe_copper = new PickaxeItem(MItemTier.COPPER,8,-3.15F, (new Item.Properties()).group(Reference.minestrapp)).setRegistryName(Reference.id, "copper_pickaxe"));
 		registerItem(axe_copper = new AxeItem(MItemTier.COPPER,8,-3.15F, (new Item.Properties()).group(Reference.minestrapp)).setRegistryName(Reference.id, "copper_axe"));
 		registerItem(shovel_copper = new ShovelItem(MItemTier.COPPER,8,-3.15F, (new Item.Properties()).group(Reference.minestrapp)).setRegistryName(Reference.id, "copper_shovel"));
 		registerItem(hoe_copper = new HoeItem(MItemTier.COPPER,1, (new Item.Properties()).group(Reference.minestrapp)).setRegistryName(Reference.id, "copper_hoe"));
 		registerItem(sword_copper = new SwordItem(MItemTier.COPPER,8,-3.15F, (new Item.Properties()).group(Reference.minestrapp)).setRegistryName(Reference.id, "copper_sword"));
+		registerItem(pickaxe_bronze = new PickaxeItem(MItemTier.BRONZE,8,-3.15F, (new Item.Properties()).group(Reference.minestrapp)).setRegistryName(Reference.id, "bronze_pickaxe"));
+		registerItem(axe_bronze = new AxeItem(MItemTier.BRONZE,8,-3.15F, (new Item.Properties()).group(Reference.minestrapp)).setRegistryName(Reference.id, "bronze_axe"));
+		registerItem(shovel_bronze = new ShovelItem(MItemTier.BRONZE,8,-3.15F, (new Item.Properties()).group(Reference.minestrapp)).setRegistryName(Reference.id, "bronze_shovel"));
+		registerItem(hoe_bronze = new HoeItem(MItemTier.BRONZE,1, (new Item.Properties()).group(Reference.minestrapp)).setRegistryName(Reference.id, "bronze_hoe"));
+		registerItem(sword_bronze = new SwordItem(MItemTier.BRONZE,8,-3.15F, (new Item.Properties()).group(Reference.minestrapp)).setRegistryName(Reference.id, "bronze_sword"));
 
 		//Food and Seeds
 		registerItem(cabbage = new Item((new Item.Properties()).group(Reference.minestrapp).food(MFoods.CABBAGE)).setRegistryName(Reference.id, "cabbage"));
@@ -66,6 +79,7 @@ public class MItems {
 
 		//Misc
 		registerItem(tallow = new Item((new Item.Properties()).group(Reference.minestrapp)).setRegistryName(Reference.id, "tallow"));
+		registerItem(health_container = new ItemHealthContainer(new Item.Properties().maxStackSize(1).group(Reference.minestrapp)).setRegistryName(Reference.id, "heart_container"));
 	}
 	
 	public static void registerItem(Item item) {
