@@ -1,4 +1,4 @@
-package minestrapp;
+package minestrapp.utils;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

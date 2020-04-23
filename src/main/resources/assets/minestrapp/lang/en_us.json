@@ -36,6 +36,24 @@
   "block.minestrapp.godstone": "Godstone",
   "block.minestrapp.candle": "Candle",
 
+  "item.minestrapp.copper_pickaxe": "Copper Pickaxe",
+  "item.minestrapp.copper_axe": "Copper Axe",
+  "item.minestrapp.copper_shovel": "Copper Shovel",
+  "item.minestrapp.copper_hoe": "Copper Hoe",
+  "item.minestrapp.copper_sword": "Copper Sword",
+  "item.minestrapp.bronze_pickaxe": "Bronze Pickaxe",
+  "item.minestrapp.bronze_axe": "Bronze Axe",
+  "item.minestrapp.bronze_shovel": "Bronze Shovel",
+  "item.minestrapp.bronze_hoe": "Bronze Hoe",
+  "item.minestrapp.bronze_sword": "Bronze Sword",
+
+  "item.minestrapp.ingot_tin": "Tin Ingot",
+  "item.minestrapp.ingot_titanium": "Titanium Ingot",
+  "item.minestrapp.ingot_copper": "Copper Ingot",
+  "item.minestrapp.ingot_meurodite": "Meurodite Ingot",
+  "item.minestrapp.ingot_torite": "Torite Ingot",
+  "item.minestrapp.ingot_irradium": "Irradium Ingot",
+
 
 "item.minestrapp.pepper": "Pepper",
 "item.minestrapp.cabbage": "Cabbage",
@@ -54,6 +72,8 @@
 "item.minestrapp.tomato_seeds": "Tomato Seeds",
 
   "item.minestrapp.tallow": "Tallow",
+  "item.minestrapp.heart_container": "Heart Container",
+  "item.minestrapp.health_crystal": "Health Crystal",
 
 "itemGroup.Minestrappolation": "Minestrappolation"
 }

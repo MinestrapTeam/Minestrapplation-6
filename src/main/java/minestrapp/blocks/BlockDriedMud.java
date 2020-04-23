@@ -1,7 +1,7 @@
 package minestrapp.blocks;
 
-import minestrapp.BlockUtils;
 import minestrapp.MBlocks;
+import minestrapp.utils.BlockUtils;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.material.Material;

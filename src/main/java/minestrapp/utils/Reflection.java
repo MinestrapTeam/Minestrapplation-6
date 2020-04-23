@@ -1,5 +1,7 @@
-package minestrapp;
+package minestrapp.utils;
 
+import minestrapp.Minestrapp;
+import minestrapp.RenderLayer;
 import org.reflections.Reflections;
 import org.reflections.scanners.FieldAnnotationsScanner;
 

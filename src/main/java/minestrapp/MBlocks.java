@@ -48,6 +48,9 @@ public class MBlocks {
 	public static Block ore_torite;
 	public static Block ore_salt;
 	public static Block ore_irradium;
+	public static Block ore_blazium;
+
+	public static Block blazium;
 
 	//Soil
 	public static Block mud_dried;
@@ -91,6 +94,10 @@ public class MBlocks {
 		registerBlock(ore_torite = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_torite"));
 		registerBlock(ore_salt = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_salt"));
 		registerBlock(ore_irradium = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_irradium"));
+		registerBlock(ore_blazium = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_blazium"));
+
+		//TODO implement blazium block
+		registerBlock(blazium = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "block_blazium"));
 
 		//Soil
 		registerBlock(mud_dried = new BlockDriedMud(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.7F).harvestTool(ToolType.SHOVEL)).setRegistryName(Reference.id,"dried_mud"));

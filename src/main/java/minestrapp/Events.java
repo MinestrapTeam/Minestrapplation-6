@@ -14,8 +14,6 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(modid = Reference.id, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class Events {
 
-
-
     @SubscribeEvent
     public static void onPlayerJoin(EntityJoinWorldEvent e){
         if (e.getEntity() instanceof PlayerEntity) {
@@ -30,9 +28,9 @@ public class Events {
         }
     }
 
-
     @SubscribeEvent
     public static void playerInteracted(PlayerInteractEvent.RightClickBlock e){
+
         if(e.getPlayer().isCrouching() && e.getWorld().getBlockState(e.getPos()).getBlock() == MBlocks.candle && e.getPlayer().getHeldItem(e.getHand()).getItem() instanceof DyeItem){
             e.setUseItem(Event.Result.DENY);
             //e.setUseBlock(Event.Result.ALLOW);
