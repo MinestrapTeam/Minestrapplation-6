@@ -1,9 +1,7 @@
 package minestrapp;
 
-import minestrapp.items.ItemHealthContainer;
-import minestrapp.items.ItemHealthCrystal;
-import minestrapp.items.MFoods;
-import minestrapp.items.MItemTier;
+import minestrapp.items.*;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -31,6 +29,12 @@ public class MItems {
 	public static Item shovel_bronze;
 	public static Item hoe_bronze;
 	public static Item sword_bronze;
+
+	//Armor
+	public static Item tin_helm;
+	public static Item tin_chest;
+	public static Item tin_legs;
+	public static Item tin_feet;
 
 	//Ingots
 	public static Item ingot_tin;
@@ -72,6 +76,12 @@ public class MItems {
 		registerItem(shovel_bronze = new ShovelItem(MItemTier.BRONZE,8,-3.15F, (new Item.Properties()).group(Reference.minestrapp)).setRegistryName(Reference.id, "bronze_shovel"));
 		registerItem(hoe_bronze = new HoeItem(MItemTier.BRONZE,1, (new Item.Properties()).group(Reference.minestrapp)).setRegistryName(Reference.id, "bronze_hoe"));
 		registerItem(sword_bronze = new SwordItem(MItemTier.BRONZE,8,-3.15F, (new Item.Properties()).group(Reference.minestrapp)).setRegistryName(Reference.id, "bronze_sword"));
+
+		//Armor
+		registerItem((tin_helm = new ArmorItem(MArmorMaterial.TIN, EquipmentSlotType.HEAD, (new Item.Properties().group(Reference.minestrapp)))).setRegistryName(Reference.id, "tin_helm"));
+		registerItem((tin_chest = new ArmorItem(MArmorMaterial.TIN, EquipmentSlotType.CHEST, (new Item.Properties().group(Reference.minestrapp)))).setRegistryName(Reference.id, "tin_chest"));
+		registerItem((tin_legs = new ArmorItem(MArmorMaterial.TIN, EquipmentSlotType.LEGS, (new Item.Properties().group(Reference.minestrapp)))).setRegistryName(Reference.id, "tin_legs"));
+		registerItem((tin_feet = new ArmorItem(MArmorMaterial.TIN, EquipmentSlotType.FEET, (new Item.Properties().group(Reference.minestrapp)))).setRegistryName(Reference.id, "tin_feet"));
 
 		//Ingots
 		registerItem(ingot_tin = new Item((new Item.Properties()).group(Reference.minestrapp)).setRegistryName(Reference.id, "ingot_tin"));

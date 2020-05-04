@@ -68,6 +68,10 @@ public class MBlocks {
 	public static Block crop_pepper;
 	public static Block crop_tomato;
 
+
+	//Pavers
+	public static Block test_paver;
+
 	//Misc
 	public static Block godstone;
 	public static Block mite_honey;
@@ -97,7 +101,7 @@ public class MBlocks {
 		registerBlock(ore_blazium = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_blazium"));
 
 		//TODO implement blazium block
-		registerBlock(blazium = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "block_blazium"));
+		registerBlock(blazium = new BlockBlazium(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "block_blazium"));
 
 		//Soil
 		registerBlock(mud_dried = new BlockDriedMud(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.7F).harvestTool(ToolType.SHOVEL)).setRegistryName(Reference.id,"dried_mud"));
@@ -115,9 +119,13 @@ public class MBlocks {
 		registerBlock(crop_pepper = new CropPepper(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly()).setRegistryName(Reference.id, "crop_pepper"));
 		registerBlock(crop_tomato = new CropTomato(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly()).setRegistryName(Reference.id, "crop_tomato"));
 
+		//Pavers
+		//TODO remove test paver and add other pavers
+		registerBlock(test_paver = new BlockPavers(Block.Properties.create(Material.ROCK), 0.5D).setRegistryName(Reference.id, "test_paver"));
+
 		//Misc
 		registerBlock(mite_honey = new BlockMiteHoney(Block.Properties.create(Material.PLANTS)).setRegistryName(Reference.id,"mite_honey"));
-		registerBlock(godstone = new BlockGodstone((Block.Properties.create(Material.GLASS).notSolid().tickRandomly())).setRegistryName(Reference.id, "godstone"));
+		registerBlock(godstone = new BlockGodstone((Block.Properties.create(Material.GLASS).notSolid())).setRegistryName(Reference.id, "godstone"));
 		registerBlock(candle = new BlockCandle(Block.Properties.create(Material.CLAY).notSolid()).setRegistryName(Reference.id, "candle"));
 	}
 	
