@@ -13,8 +13,27 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.function.Supplier;
 
+//TODO add the correct repair materials
 public enum MArmorMaterial implements IArmorMaterial {
     TIN("tin", 4, new int[]{1, 3, 4, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0F, () -> {
+        return Ingredient.fromItems(new IItemProvider[]{MItems.ingot_tin});
+    }),
+    BRONZE("bronze", 28, new int[]{2, 4, 5, 2}, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, () -> {
+        return Ingredient.fromItems(new IItemProvider[]{MItems.ingot_copper});
+    }),
+    STEEL("steel", 18, new int[]{3, 6, 7, 3}, 18, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, () -> {
+        return Ingredient.fromItems(new IItemProvider[]{MItems.ingot_tin});
+    }),
+    MEURODITE("meurodite", 24, new int[]{2, 6, 7, 3}, 12, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0F, () -> {
+        return Ingredient.fromItems(new IItemProvider[]{MItems.ingot_meurodite});
+    }),
+    TORITE("torite", 26, new int[]{2, 6, 7, 2}, 30, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.5F, () -> {
+        return Ingredient.fromItems(new IItemProvider[]{MItems.ingot_torite});
+    }),
+    BLAZIUM("blazium", 25, new int[]{2, 5, 6, 3}, 23, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.2F, () -> {
+        return Ingredient.fromItems(new IItemProvider[]{MItems.ingot_copper});
+    }),
+    GLACIERITE("glacierite", 28, new int[]{2, 6, 7, 2}, 34, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 2F, () -> {
         return Ingredient.fromItems(new IItemProvider[]{MItems.ingot_tin});
     });
 

@@ -63,6 +63,8 @@ public class MItems {
 	public static Item tallow;
 	public static Item health_container;
 	public static Item health_crystal;
+	public static Item smelling_salts;
+	public static Item soul_gem;
 
 	static {
 		//Tools //TODO implement Minestrapp tool items instead of using vanilla
@@ -109,6 +111,9 @@ public class MItems {
 		registerItem(tallow = new Item((new Item.Properties()).group(Reference.minestrapp)).setRegistryName(Reference.id, "tallow"));
 		registerItem(health_container = new ItemHealthContainer(new Item.Properties().maxStackSize(1).group(Reference.minestrapp)).setRegistryName(Reference.id, "heart_container"));
 		registerItem(health_crystal = new ItemHealthCrystal(new Item.Properties().maxStackSize(1).maxDamage(1).group(Reference.minestrapp)).setRegistryName(Reference.id, "health_crystal"));
+		registerItem(smelling_salts = new ItemSmellingSalts(new Item.Properties().maxStackSize(1).maxDamage(1).group(Reference.minestrapp)).setRegistryName(Reference.id, "smelling_salts"));
+		registerItem(soul_gem = new ItemSoulGem(new Item.Properties().maxStackSize(1).maxDamage(1).group(Reference.minestrapp)).setRegistryName(Reference.id, "gem_soul"));
+
 	}
 	
 	public static void registerItem(Item item) {

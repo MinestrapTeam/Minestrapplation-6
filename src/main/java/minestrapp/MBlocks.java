@@ -70,7 +70,13 @@ public class MBlocks {
 
 
 	//Pavers
-	public static Block test_paver;
+	public static Block redrock_paver;
+	public static Block stone_paver;
+	public static Block coldstone_paver;
+	public static Block icestone_paver;
+	public static Block oceanstone_paver;
+	public static Block netherrack_paver;
+	public static Block endstone_paver;
 
 	//Misc
 	public static Block godstone;
@@ -79,26 +85,26 @@ public class MBlocks {
 	
 	static {
 		//Stone and ore
-		registerBlock(redrock = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "redrock"));
-		registerBlock(deep_redrock = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "deep_redrock"));
-		registerBlock(deepstone = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "deepstone"));
-		registerBlock(coldstone = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "coldstone"));
-		registerBlock(deep_coldstone = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "deep_coldstone"));
-		registerBlock(icestone = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "icestone"));
-		registerBlock(glacierrock = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "glacierrock"));
-		registerBlock(oceanstone = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "oceanstone"));
-		registerBlock(deep_oceanstone = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "deep_oceanstone"));
+		registerBlock(redrock = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "redrock"));
+		registerBlock(deep_redrock = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "deep_redrock"));
+		registerBlock(deepstone = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "deepstone"));
+		registerBlock(coldstone = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "coldstone"));
+		registerBlock(deep_coldstone = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "deep_coldstone"));
+		registerBlock(icestone = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "icestone"));
+		registerBlock(glacierrock = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "glacierrock"));
+		registerBlock(oceanstone = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "oceanstone"));
+		registerBlock(deep_oceanstone = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "deep_oceanstone"));
 
 		registerBlock(slab_deepstone = new SlabBlock(Block.Properties.create(Material.ROCK)).setRegistryName(Reference.id, "slab_deepstone"));
 
-		registerBlock(ore_tin = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_tin"));
-		registerBlock(ore_titanium = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_titanium"));
-		registerBlock(ore_copper = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_copper"));
-		registerBlock(ore_meurodite = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_meurodite"));
-		registerBlock(ore_torite = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_torite"));
-		registerBlock(ore_salt = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_salt"));
-		registerBlock(ore_irradium = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_irradium"));
-		registerBlock(ore_blazium = new Block(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_blazium"));
+		registerBlock(ore_tin = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_tin"));
+		registerBlock(ore_titanium = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_titanium"));
+		registerBlock(ore_copper = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_copper"));
+		registerBlock(ore_meurodite = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_meurodite"));
+		registerBlock(ore_torite = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_torite"));
+		registerBlock(ore_salt = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_salt"));
+		registerBlock(ore_irradium = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_irradium"));
+		registerBlock(ore_blazium = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "ore_blazium"));
 
 		//TODO implement blazium block
 		registerBlock(blazium = new BlockBlazium(Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)).setRegistryName(Reference.id, "block_blazium"));
@@ -120,8 +126,14 @@ public class MBlocks {
 		registerBlock(crop_tomato = new CropTomato(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly()).setRegistryName(Reference.id, "crop_tomato"));
 
 		//Pavers
-		//TODO remove test paver and add other pavers
-		registerBlock(test_paver = new BlockPavers(Block.Properties.create(Material.ROCK), 0.5D).setRegistryName(Reference.id, "test_paver"));
+		//TODO add models and textures
+		registerBlock(redrock_paver = new BlockPavers(Block.Properties.create(Material.ROCK), 1.4D).setRegistryName(Reference.id, "red_rock_paver"));
+		registerBlock(stone_paver = new BlockPavers(Block.Properties.create(Material.ROCK), 1.4D).setRegistryName(Reference.id, "stone_paver"));
+		registerBlock(coldstone_paver = new BlockPavers(Block.Properties.create(Material.ROCK), 1.4D).setRegistryName(Reference.id, "coldstone_paver"));
+		registerBlock(icestone_paver = new BlockPavers(Block.Properties.create(Material.ROCK), 1.4D).setRegistryName(Reference.id, "icestone_paver"));
+		registerBlock(oceanstone_paver = new BlockPavers(Block.Properties.create(Material.ROCK), 1.4D).setRegistryName(Reference.id, "oceanstone_paver"));
+		registerBlock(netherrack_paver = new BlockPavers(Block.Properties.create(Material.ROCK), 1.6D).setRegistryName(Reference.id, "netherrack_paver"));
+		registerBlock(endstone_paver = new BlockPavers(Block.Properties.create(Material.ROCK), 1.8D).setRegistryName(Reference.id, "end_stone_paver"));
 
 		//Misc
 		registerBlock(mite_honey = new BlockMiteHoney(Block.Properties.create(Material.PLANTS)).setRegistryName(Reference.id,"mite_honey"));
