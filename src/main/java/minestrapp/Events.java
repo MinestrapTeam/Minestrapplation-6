@@ -48,7 +48,7 @@ public class Events {
 
         if(entity instanceof PlayerEntity){
             //TODO needs removed at some point just a random effect for testing armor sets
-            if(EntityUtils.hasArmorSet(entity, MItems.tin_helm, MItems.tin_chest, MItems.tin_legs, MItems.tin_feet)){
+            if(EntityUtils.hasArmorSet(entity, MItems.TIN_HELM.get(), MItems.TIN_CHEST.get(), MItems.TIN_LEGS.get(), MItems.TIN_FEET.get())){
                 BlockPos entityPos = entity.getPosition();
                 World world = entity.getEntityWorld();
                 if(!world.isAirBlock(entityPos.down())){
@@ -80,7 +80,7 @@ public class Events {
 
     @SubscribeEvent
     public static void playerInteracted(PlayerInteractEvent.RightClickBlock e){
-        if(e.getPlayer().isCrouching() && e.getWorld().getBlockState(e.getPos()).getBlock() == MBlocks.candle && e.getPlayer().getHeldItem(e.getHand()).getItem() instanceof DyeItem){
+        if(e.getPlayer().isCrouching() && e.getWorld().getBlockState(e.getPos()).getBlock() == MBlocks.CANDLE.get() && e.getPlayer().getHeldItem(e.getHand()).getItem() instanceof DyeItem){
             e.setUseItem(Event.Result.DENY);
             //e.setUseBlock(Event.Result.ALLOW);
         }

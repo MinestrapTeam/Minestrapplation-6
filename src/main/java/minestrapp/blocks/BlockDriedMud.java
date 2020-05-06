@@ -20,7 +20,7 @@ public class BlockDriedMud extends Block{
     @Override
     public void neighborChanged(BlockState state, World world, BlockPos pos, Block blockIn, BlockPos fromPos, boolean isMoving) {
         if(BlockUtils.hasOnAnySide(world, pos, Material.WATER)){
-            world.setBlockState(pos, MBlocks.mud.getDefaultState());
+            world.setBlockState(pos, MBlocks.MUD.get().getDefaultState());
         }
     }
 

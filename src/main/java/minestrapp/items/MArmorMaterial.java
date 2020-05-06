@@ -16,25 +16,25 @@ import java.util.function.Supplier;
 //TODO add the correct repair materials
 public enum MArmorMaterial implements IArmorMaterial {
     TIN("tin", 4, new int[]{1, 3, 4, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0F, () -> {
-        return Ingredient.fromItems(new IItemProvider[]{MItems.ingot_tin});
+        return Ingredient.fromItems(new IItemProvider[]{MItems.INGOT_TIN.get()});
     }),
     BRONZE("bronze", 28, new int[]{2, 4, 5, 2}, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, () -> {
-        return Ingredient.fromItems(new IItemProvider[]{MItems.ingot_copper});
+        return Ingredient.fromItems(new IItemProvider[]{MItems.INGOT_COPPER.get()});
     }),
     STEEL("steel", 18, new int[]{3, 6, 7, 3}, 18, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, () -> {
-        return Ingredient.fromItems(new IItemProvider[]{MItems.ingot_tin});
+        return Ingredient.fromItems(new IItemProvider[]{MItems.INGOT_TIN.get()});
     }),
     MEURODITE("meurodite", 24, new int[]{2, 6, 7, 3}, 12, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0F, () -> {
-        return Ingredient.fromItems(new IItemProvider[]{MItems.ingot_meurodite});
+        return Ingredient.fromItems(new IItemProvider[]{MItems.GEM_MEURODITE.get()});
     }),
     TORITE("torite", 26, new int[]{2, 6, 7, 2}, 30, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.5F, () -> {
-        return Ingredient.fromItems(new IItemProvider[]{MItems.ingot_torite});
+        return Ingredient.fromItems(new IItemProvider[]{MItems.INGOT_TORITE.get()});
     }),
     BLAZIUM("blazium", 25, new int[]{2, 5, 6, 3}, 23, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.2F, () -> {
-        return Ingredient.fromItems(new IItemProvider[]{MItems.ingot_copper});
+        return Ingredient.fromItems(new IItemProvider[]{MItems.INGOT_COPPER.get()});
     }),
     GLACIERITE("glacierite", 28, new int[]{2, 6, 7, 2}, 34, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 2F, () -> {
-        return Ingredient.fromItems(new IItemProvider[]{MItems.ingot_tin});
+        return Ingredient.fromItems(new IItemProvider[]{MItems.INGOT_TIN.get()});
     });
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};

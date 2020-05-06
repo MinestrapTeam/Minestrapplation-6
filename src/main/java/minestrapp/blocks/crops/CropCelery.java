@@ -19,7 +19,7 @@ public class CropCelery extends CropsBlock {
 
     @Override
     protected IItemProvider getSeedsItem() {
-        return MItems.seeds_celery;
+        return MItems.SEEDS_CELERY.get();
     }
 
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {

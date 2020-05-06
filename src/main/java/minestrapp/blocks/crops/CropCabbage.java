@@ -19,7 +19,7 @@ public class CropCabbage extends CropsBlock {
 
     @Override
     protected IItemProvider getSeedsItem() {
-        return MItems.seeds_cabbage;
+        return MItems.SEEDS_CABBAGE.get();
     }
 
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {

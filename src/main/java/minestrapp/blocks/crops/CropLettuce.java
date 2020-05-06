@@ -19,7 +19,7 @@ public class CropLettuce extends CropsBlock {
 
     @Override
     protected IItemProvider getSeedsItem() {
-        return MItems.lettuce;
+        return MItems.LETTUCE.get();
     }
 
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {

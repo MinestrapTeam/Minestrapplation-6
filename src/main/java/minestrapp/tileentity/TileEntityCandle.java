@@ -20,7 +20,7 @@ public class TileEntityCandle extends TileEntity {
     }
 
     public TileEntityCandle(){
-        super(TileEntityTypes.CANDLE);
+        super(TileEntityTypes.CANDLE_TILE.get());
     }
 
     public void setColor(int r, int g, int b){

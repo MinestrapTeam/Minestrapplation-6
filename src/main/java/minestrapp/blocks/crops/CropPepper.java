@@ -19,7 +19,7 @@ public class CropPepper extends CropsBlock {
 
     @Override
     protected IItemProvider getSeedsItem() {
-        return MItems.seeds_pepper;
+        return MItems.SEEDS_PEPPER.get();
     }
 
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {

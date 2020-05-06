@@ -19,7 +19,7 @@ public class CropPeanut extends CropsBlock {
 
     @Override
     protected IItemProvider getSeedsItem() {
-        return MItems.peanut;
+        return MItems.PEANUT.get();
     }
 
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {

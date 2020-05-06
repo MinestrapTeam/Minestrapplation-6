@@ -10,7 +10,7 @@ public class Reference {
 	public static ItemGroup minestrapp = new ItemGroup("Minestrappolation") {
 		@Override
 		public ItemStack createIcon() {
-			return new ItemStack(MBlocks.deep_redrock);
+			return new ItemStack(MBlocks.DEEP_REDROCK.get());
 		}
 	};
 }

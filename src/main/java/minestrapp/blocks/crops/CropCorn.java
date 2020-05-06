@@ -71,7 +71,7 @@ public class CropCorn extends CropsBlock {
 
     @Override
     protected IItemProvider getSeedsItem() {
-        return MItems.corn;
+        return MItems.CORN.get();
     }
 
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {

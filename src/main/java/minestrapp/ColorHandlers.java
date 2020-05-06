@@ -10,6 +10,6 @@ public class ColorHandlers {
 
     @SubscribeEvent
     public static void registerColorHandler(ColorHandlerEvent.Block event){
-      event.getBlockColors().register(new BlockCandle.ColorHandler(), MBlocks.candle);
+      event.getBlockColors().register(new BlockCandle.ColorHandler(), MBlocks.CANDLE.get());
     }
 }

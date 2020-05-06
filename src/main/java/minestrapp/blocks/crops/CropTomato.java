@@ -19,7 +19,7 @@ public class CropTomato extends CropsBlock {
 
     @Override
     protected IItemProvider getSeedsItem() {
-        return MItems.tomato;
+        return MItems.SEEDS_TOMATO.get();
     }
 
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {

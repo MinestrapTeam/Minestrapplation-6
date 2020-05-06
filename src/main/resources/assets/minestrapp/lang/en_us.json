@@ -9,6 +9,8 @@
 "block.minestrapp.oceanstone": "Oceanstone",
 "block.minestrapp.deep_oceanstone": "Deep Oceanstone",
 
+  "block.minestrapp.slab_deepstone": "Deepstone Slab",
+
   "block.minestrapp.ore_tin": "Tin Ore",
   "block.minestrapp.ore_titanium": "Titanium Ore",
   "block.minestrapp.ore_copper": "Copper Ore",
@@ -16,6 +18,9 @@
   "block.minestrapp.ore_torite": "Torite Ore",
   "block.minestrapp.ore_salt": "Salt Ore",
   "block.minestrapp.ore_irradium": "Irradium Ore",
+  "block.minestrapp.ore_blazium": "Blazium Ore",
+
+  "block.minestrapp.block_blazium": "Blazium",
 
 "block.minestrapp.dried_mud": "Dried Mud",
 "block.minestrapp.mud": "Mud",
@@ -47,12 +52,17 @@
   "item.minestrapp.bronze_hoe": "Bronze Hoe",
   "item.minestrapp.bronze_sword": "Bronze Sword",
 
+  "item.minestrapp.tin_helm": "Tin Helmet",
+  "item.minestrapp.tin_chest": "Tin Chestplate",
+  "item.minestrapp.tin_legs": "Tin Leggings",
+  "item.minestrapp.tin_feet": "Tin Boots",
+
   "item.minestrapp.ingot_tin": "Tin Ingot",
   "item.minestrapp.ingot_titanium": "Titanium Ingot",
   "item.minestrapp.ingot_copper": "Copper Ingot",
-  "item.minestrapp.ingot_meurodite": "Meurodite Ingot",
+  "item.minestrapp.gem_meurodite": "Meurodite Gem",
   "item.minestrapp.ingot_torite": "Torite Ingot",
-  "item.minestrapp.ingot_irradium": "Irradium Ingot",
+  "item.minestrapp.irradium": "Irradium",
 
 
 "item.minestrapp.pepper": "Pepper",
@@ -74,6 +84,25 @@
   "item.minestrapp.tallow": "Tallow",
   "item.minestrapp.heart_container": "Heart Container",
   "item.minestrapp.health_crystal": "Health Crystal",
+  "item.minestrapp.smelling_salts": "Smelling Salts",
+  "item.minestrapp.gem_soul": "Soul Gem",
+
+"effect.minestrapp.hydrophobia_effect": "Hydrophobia",
+  "item.minecraft.potion.effect.hydrophobia": "Potion of Hydrophobia",
+  "item.minecraft.splash_potion.effect.hydrophobia": "Splash Potion of Hydrophobia",
+  "item.minecraft.lingering_potion.effect.hydrophobia": "Lingering Potion of Hydrophobia",
+  "item.minecraft.tipped_arrow.effect.hydrophobia": "Arrow of Hydrophobia",
+  "effect.minestrapp.climbing_effect": "Climbing",
+  "item.minecraft.potion.effect.climbing": "Potion of Climbing",
+  "item.minecraft.splash_potion.effect.climbing": "Splash Potion of Climbing",
+  "item.minecraft.lingering_potion.effect.climbing": "Lingering Potion of Climbing",
+  "item.minecraft.tipped_arrow.effect.climbing": "Arrow of Climbing",
+  "effect.minestrapp.infection_effect": "Infection",
+  "item.minecraft.potion.effect.infection": "Potion of Infection",
+  "item.minecraft.splash_potion.effect.infection": "Splash Potion of Infection",
+  "item.minecraft.lingering_potion.effect.infection": "Lingering Potion of Infection",
+  "item.minecraft.tipped_arrow.effect.infection": "Arrow of Infection",
+
 
 "itemGroup.Minestrappolation": "Minestrappolation"
 }

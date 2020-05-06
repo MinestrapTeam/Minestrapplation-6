@@ -30,7 +30,7 @@ public class BlockMud extends Block {
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext context) {
         if(context.getWorld().dimension.doesWaterVaporize()){
-            return MBlocks.mud_dried.getDefaultState();
+            return MBlocks.MUD_DRIED.get().getDefaultState();
         }
 
         return super.getStateForPlacement(context);
@@ -43,7 +43,7 @@ public class BlockMud extends Block {
                 float temp = worldIn.getBiome(pos).getDefaultTemperature();
 
                 if(temp > 0.9F && !worldIn.isRaining() && worldIn.isDaytime() && worldIn.getBlockState(pos.up()).getMaterial() != Material.WATER){
-                    worldIn.setBlockState(pos, MBlocks.mud_dried.getDefaultState());
+                    worldIn.setBlockState(pos, MBlocks.MUD_DRIED.get().getDefaultState());
                 }
 
             }

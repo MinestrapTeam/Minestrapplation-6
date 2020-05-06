@@ -3,6 +3,7 @@ package minestrapp;
 import minestrapp.config.Config;
 import minestrapp.proxy.ClientProxy;
 import minestrapp.proxy.ServerProxy;
+import minestrapp.tileentity.TileEntityTypes;
 import minestrapp.worldgen.OreGen;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -34,6 +35,15 @@ public class Minestrapp {
 
 		Config.loadConfig(Config.CLIENT_CONFIG, FMLPaths.CONFIGDIR.get().resolve("minestrapp-client.toml"));
 		Config.loadConfig(Config.COMMON_CONFIG, FMLPaths.CONFIGDIR.get().resolve("minestrapp-common.toml"));
+
+		MBlocks.BLOCK_ITEM_REGISTRY.register(FMLJavaModLoadingContext.get().getModEventBus());
+		MBlocks.BLOCK_REGISTRY.register(FMLJavaModLoadingContext.get().getModEventBus());
+		MItems.ITEM_REGISTRY.register(FMLJavaModLoadingContext.get().getModEventBus());
+
+		TileEntityTypes.TILEENTITY_REGISTRY.register(FMLJavaModLoadingContext.get().getModEventBus());
+
+		MPotions.POTION_REGISTRY.register(FMLJavaModLoadingContext.get().getModEventBus());
+		MPotions.EFFECT_REGISTRY.register(FMLJavaModLoadingContext.get().getModEventBus());
 	}
 
 	private void setup(final FMLCommonSetupEvent event) {

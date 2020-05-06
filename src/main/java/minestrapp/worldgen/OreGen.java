@@ -22,13 +22,13 @@ public class OreGen {
 
             if(Config.GEN_COPPER.get()){
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(
-                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, MBlocks.ore_copper.getDefaultState(), Config.GEN_COPPER_VEIN_SIZE.get())).withPlacement(Placement.COUNT_RANGE.configure(
+                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, MBlocks.ORE_COPPER.get().getDefaultState(), Config.GEN_COPPER_VEIN_SIZE.get())).withPlacement(Placement.COUNT_RANGE.configure(
                         new CountRangeConfig(100, 75, 75, 255))));
             }
 
             if(Config.GEN_TIN.get()){
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(
-                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, MBlocks.ore_copper.getDefaultState(), Config.GEN_TIN_VEIN_SIZE.get())).withPlacement(Placement.COUNT_RANGE.configure(
+                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, MBlocks.ORE_TIN.get().getDefaultState(), Config.GEN_TIN_VEIN_SIZE.get())).withPlacement(Placement.COUNT_RANGE.configure(
                         new CountRangeConfig(100, 75, 75, 255))));
             }
 

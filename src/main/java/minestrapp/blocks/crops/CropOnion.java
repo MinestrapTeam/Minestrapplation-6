@@ -19,7 +19,7 @@ public class CropOnion extends CropsBlock {
 
     @Override
     protected IItemProvider getSeedsItem() {
-        return MItems.onion;
+        return MItems.ONION.get();
     }
 
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {

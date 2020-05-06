@@ -37,7 +37,7 @@ public class SurfaceDepositFeature extends Feature<NoFeatureConfig> {
             blockpos.setPos(np).move(x, y, z);
 
             if (worldIn.isAirBlock(blockpos) && worldIn.getBlockState(blockpos.down()).isSolid() && blockpos.getY() < worldIn.getMaxHeight() - 1) {
-                    worldIn.setBlockState(blockpos, MBlocks.icestone.getDefaultState(), 2);
+                    worldIn.setBlockState(blockpos, MBlocks.ICESTONE.get().getDefaultState(), 2);
             }
         }
 
