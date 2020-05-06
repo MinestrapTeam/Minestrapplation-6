@@ -37,7 +37,12 @@ public class MItems {
 	public static final RegistryObject<Item> GEM_MEURODITE = ITEM_REGISTRY.register("gem_meurodite", () -> new Item((new Item.Properties()).group(Reference.minestrapp)));
 	public static final RegistryObject<Item> INGOT_TORITE = ITEM_REGISTRY.register("ingot_torite", () -> new Item((new Item.Properties()).group(Reference.minestrapp)));
 	public static final RegistryObject<Item> IRRADIUM = ITEM_REGISTRY.register("irradium", () -> new Item((new Item.Properties()).group(Reference.minestrapp)));
-
+	public static final RegistryObject<Item> CHUNK_REDROCK = ITEM_REGISTRY.register("chunk_redrock", () -> new Item((new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> CHUNK_STONE = ITEM_REGISTRY.register("chunk_stone", () -> new Item((new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> CHUNK_COLDSTONE = ITEM_REGISTRY.register("chunk_coldstone", () -> new Item((new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> CHUNK_ICESTONE = ITEM_REGISTRY.register("chunk_icestone", () -> new Item((new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> CHUNK_OCEANSTONE = ITEM_REGISTRY.register("chunk_oceanstone", () -> new Item((new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> CHUNK_NETHERRACK = ITEM_REGISTRY.register("chunk_netherrack", () -> new Item((new Item.Properties().group(Reference.minestrapp))));
 
 	//Food and Seeds
 	public static final RegistryObject<Item> CABBAGE = ITEM_REGISTRY.register("cabbage", () -> new Item((new Item.Properties()).group(Reference.minestrapp).food(MFoods.CABBAGE)));

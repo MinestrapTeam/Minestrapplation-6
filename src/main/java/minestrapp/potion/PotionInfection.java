@@ -1,6 +1,7 @@
 package minestrapp.potion;
 
 
+import minestrapp.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.LivingEntity;
@@ -20,7 +21,7 @@ public class PotionInfection extends Effect {
 
     private Random rand = new Random();
 
-    private ResourceLocation rl = new ResourceLocation("minecraft", "valid_spawn");
+    private ResourceLocation rl = new ResourceLocation(Reference.id, "infection");
 
     public PotionInfection(){
         super(EffectType.HARMFUL, new Color(0, 74, 37).getRGB());

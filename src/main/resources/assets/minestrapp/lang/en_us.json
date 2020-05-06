@@ -63,6 +63,12 @@
   "item.minestrapp.gem_meurodite": "Meurodite Gem",
   "item.minestrapp.ingot_torite": "Torite Ingot",
   "item.minestrapp.irradium": "Irradium",
+  "item.minestrapp.chunk_redrock": "Redrock Chunk",
+  "item.minestrapp.chunk_stone": "Stone Chunk",
+  "item.minestrapp.chunk_coldstone": "Coldstone Chunk",
+  "item.minestrapp.chunk_icestone": "Icestone Chunk",
+  "item.minestrapp.chunk_oceanstone": "Oceanstone Chunk",
+  "item.minestrapp.chunk_netherrack": "Nether Chunk",
 
 
 "item.minestrapp.pepper": "Pepper",
