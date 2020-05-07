@@ -29,6 +29,27 @@ public class MItems {
 	public static final RegistryObject<Item> TIN_CHEST = ITEM_REGISTRY.register("tin_chest", () -> new ArmorItem(MArmorMaterial.TIN, EquipmentSlotType.CHEST, (new Item.Properties().group(Reference.minestrapp))));
 	public static final RegistryObject<Item> TIN_LEGS = ITEM_REGISTRY.register("tin_legs", () -> new ArmorItem(MArmorMaterial.TIN, EquipmentSlotType.LEGS, (new Item.Properties().group(Reference.minestrapp))));
 	public static final RegistryObject<Item> TIN_FEET = ITEM_REGISTRY.register("tin_feet", () -> new ArmorItem(MArmorMaterial.TIN, EquipmentSlotType.FEET, (new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> BRONZE_HELM = ITEM_REGISTRY.register("bronze_helm", () -> new ArmorItem(MArmorMaterial.BRONZE, EquipmentSlotType.HEAD, (new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> BRONZE_CHEST = ITEM_REGISTRY.register("bronze_chest", () -> new ArmorItem(MArmorMaterial.BRONZE, EquipmentSlotType.CHEST, (new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> BRONZE_LEGS = ITEM_REGISTRY.register("bronze_legs", () -> new ArmorItem(MArmorMaterial.BRONZE, EquipmentSlotType.LEGS, (new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> BRONZE_FEET = ITEM_REGISTRY.register("bronze_feet", () -> new ArmorItem(MArmorMaterial.BRONZE, EquipmentSlotType.FEET, (new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> TITANIUM_HELM = ITEM_REGISTRY.register("titanium_helm", () -> new ArmorItem(MArmorMaterial.TITANIUM, EquipmentSlotType.HEAD, (new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> TITANIUM_CHEST = ITEM_REGISTRY.register("titanium_chest", () -> new ArmorItem(MArmorMaterial.TITANIUM, EquipmentSlotType.CHEST, (new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> TITANIUM_LEGS = ITEM_REGISTRY.register("titanium_legs", () -> new ArmorItem(MArmorMaterial.TITANIUM, EquipmentSlotType.LEGS, (new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> TITANIUM_FEET = ITEM_REGISTRY.register("titanium_feet", () -> new ArmorItem(MArmorMaterial.TITANIUM, EquipmentSlotType.FEET, (new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> MEURODITE_HELM = ITEM_REGISTRY.register("meurodite_helm", () -> new ArmorItem(MArmorMaterial.MEURODITE, EquipmentSlotType.HEAD, (new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> MEURODITE_CHEST = ITEM_REGISTRY.register("meurodite_chest", () -> new ArmorItem(MArmorMaterial.MEURODITE, EquipmentSlotType.CHEST, (new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> MEURODITE_LEGS = ITEM_REGISTRY.register("meurodite_legs", () -> new ArmorItem(MArmorMaterial.MEURODITE, EquipmentSlotType.LEGS, (new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> MEURODITE_FEET = ITEM_REGISTRY.register("meurodite_feet", () -> new ArmorItem(MArmorMaterial.MEURODITE, EquipmentSlotType.FEET, (new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> TORITE_HELM = ITEM_REGISTRY.register("torite_helm", () -> new ArmorItem(MArmorMaterial.TORITE, EquipmentSlotType.HEAD, (new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> TORITE_CHEST = ITEM_REGISTRY.register("torite_chest", () -> new ArmorItem(MArmorMaterial.TORITE, EquipmentSlotType.CHEST, (new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> TORITE_LEGS = ITEM_REGISTRY.register("torite_legs", () -> new ArmorItem(MArmorMaterial.TORITE, EquipmentSlotType.LEGS, (new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> TORITE_FEET = ITEM_REGISTRY.register("torite_feet", () -> new ArmorItem(MArmorMaterial.TORITE, EquipmentSlotType.FEET, (new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> BLAZIUM_HELM = ITEM_REGISTRY.register("fire_helm", () -> new ArmorItem(MArmorMaterial.BLAZIUM, EquipmentSlotType.HEAD, (new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> BLAZIUM_CHEST = ITEM_REGISTRY.register("fire_chest", () -> new ArmorItem(MArmorMaterial.BLAZIUM, EquipmentSlotType.CHEST, (new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> BLAZIUM_LEGS = ITEM_REGISTRY.register("fire_legs", () -> new ArmorItem(MArmorMaterial.BLAZIUM, EquipmentSlotType.LEGS, (new Item.Properties().group(Reference.minestrapp))));
+	public static final RegistryObject<Item> BLAZIUM_FEET = ITEM_REGISTRY.register("fire_feet", () -> new ArmorItem(MArmorMaterial.BLAZIUM, EquipmentSlotType.FEET, (new Item.Properties().group(Reference.minestrapp))));
+
 
 	//Ingots, Gems, and chunks
 	public static final RegistryObject<Item> INGOT_TIN = ITEM_REGISTRY.register("ingot_tin", () -> new Item((new Item.Properties()).group(Reference.minestrapp)));
