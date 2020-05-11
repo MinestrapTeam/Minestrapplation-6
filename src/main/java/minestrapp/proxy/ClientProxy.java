@@ -1,7 +1,10 @@
 package minestrapp.proxy;
 
 import minestrapp.MBlocks;
+import minestrapp.containers.ContainerTypes;
+import minestrapp.gui.MelterGui;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.entity.player.PlayerEntity;
@@ -23,6 +26,8 @@ public class ClientProxy extends ServerProxy{
 		RenderTypeLookup.setRenderLayer(MBlocks.GODSTONE.get(), RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(MBlocks.MITE_HONEY.get(), RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(MBlocks.CANDLE.get(), RenderType.getCutout());
+
+		ScreenManager.registerFactory(ContainerTypes.MELTER_CONTAINER.get(), MelterGui::new);
 	}
 
 	@Override

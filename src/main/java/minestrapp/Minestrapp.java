@@ -1,8 +1,10 @@
 package minestrapp;
 
 import minestrapp.config.Config;
+import minestrapp.containers.ContainerTypes;
 import minestrapp.proxy.ClientProxy;
 import minestrapp.proxy.ServerProxy;
+import minestrapp.recipes.Recipes;
 import minestrapp.tileentity.TileEntityTypes;
 import minestrapp.worldgen.OreGen;
 import net.minecraftforge.fml.DistExecutor;
@@ -41,6 +43,9 @@ public class Minestrapp {
 		MItems.ITEM_REGISTRY.register(FMLJavaModLoadingContext.get().getModEventBus());
 
 		TileEntityTypes.TILEENTITY_REGISTRY.register(FMLJavaModLoadingContext.get().getModEventBus());
+		ContainerTypes.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
+
+		Recipes.RECIPES.register(FMLJavaModLoadingContext.get().getModEventBus());
 
 		MPotions.POTION_REGISTRY.register(FMLJavaModLoadingContext.get().getModEventBus());
 		MPotions.EFFECT_REGISTRY.register(FMLJavaModLoadingContext.get().getModEventBus());

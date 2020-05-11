@@ -1,0 +1,10 @@
+{
+  "type": "minestrapp:melter",
+  "ingredient": {
+    "item": "minecraft:iron_ingot"
+  },
+  "result": {
+    "item": "minecraft:lava_bucket"
+  },
+  "bucket": true
+}

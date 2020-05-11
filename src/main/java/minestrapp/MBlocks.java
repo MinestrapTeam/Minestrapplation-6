@@ -21,6 +21,9 @@ public class MBlocks {
 	public static final DeferredRegister<Block> BLOCK_REGISTRY = new DeferredRegister<>(ForgeRegistries.BLOCKS, Reference.id);
 	public static final DeferredRegister<Item> BLOCK_ITEM_REGISTRY = new DeferredRegister<>(ForgeRegistries.ITEMS, Reference.id);
 
+	//Containers
+	public static final RegistryObject<Block> MELTER = registerBlock("melter", () -> new BlockMelter(Block.Properties.create(Material.ROCK)));
+
 	// Stones
 	public static final RegistryObject<Block> REDROCK = registerBlock("redrock", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)));
 	public static final RegistryObject<Block> DEEP_REDROCK = registerBlock("deep_redrock", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)));
