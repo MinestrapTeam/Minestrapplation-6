@@ -1,5 +1,6 @@
-package minestrapp;
+package minestrapp.init;
 
+import minestrapp.Reference;
 import minestrapp.potion.PotionClimbing;
 import minestrapp.potion.PotionHydrophobia;
 import minestrapp.potion.PotionInfection;

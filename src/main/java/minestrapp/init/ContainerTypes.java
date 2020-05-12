@@ -1,7 +1,8 @@
-package minestrapp.containers;
+package minestrapp.init;
 
 import minestrapp.Minestrapp;
 import minestrapp.Reference;
+import minestrapp.containers.ContainerMelter;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.common.extensions.IForgeContainerType;

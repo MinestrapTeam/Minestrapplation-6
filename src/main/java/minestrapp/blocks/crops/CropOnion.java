@@ -1,6 +1,6 @@
 package minestrapp.blocks.crops;
 
-import minestrapp.MItems;
+import minestrapp.init.MItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CropsBlock;

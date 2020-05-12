@@ -35,7 +35,7 @@ public class MelterGui extends ContainerScreen<ContainerMelter> {
     @Override
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
         GlStateManager.color4f(1.0F, 1.0F, 1.0F, 1.0F);
-        minecraft.fontRenderer.drawString(Integer.toString(this.container.te.burnTime), 0, 0, new Color(255, 38, 234).getRGB());
+        minecraft.fontRenderer.drawString(Integer.toString(this.container.te.burnTime), 0, 0, new Color(255, 132, 38).getRGB());
         minecraft.fontRenderer.drawString(Integer.toString(this.container.te.cookTime), 0, 15, new Color(255, 251, 15).getRGB());
         this.minecraft.getTextureManager().bindTexture(GUI);
         int relX = (this.width - this.xSize) / 2;
@@ -47,7 +47,7 @@ public class MelterGui extends ContainerScreen<ContainerMelter> {
     }
 
     private int burnScaled(){
-        int totalBurn = this.container.te.bunrTimeTotal;
+        int totalBurn = this.container.te.burnTimeTotal;
         int l;
 
         if(totalBurn <= 0){

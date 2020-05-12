@@ -1,6 +1,7 @@
 package minestrapp.blocks;
 
 import minestrapp.tileentity.TileEntityMelter;
+import minestrapp.utils.BlockUtils;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ITileEntityProvider;
@@ -15,6 +16,7 @@ import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
+import net.minecraftforge.items.CapabilityItemHandler;
 
 import javax.annotation.Nullable;
 
@@ -30,9 +32,22 @@ public class BlockMelter extends Block implements ITileEntityProvider {
             if (tileEntity instanceof INamedContainerProvider) {
                 NetworkHooks.openGui((ServerPlayerEntity) player, (INamedContainerProvider) tileEntity, tileEntity.getPos());
             }
-            return ActionResultType.PASS;
+            return ActionResultType.SUCCESS;
+        } else {
+            return ActionResultType.SUCCESS;
         }
-        return super.onBlockActivated(state, world, pos, player, hand, result);
+    }
+
+    @Override
+    public void onReplaced(BlockState state, World worldIn, BlockPos pos, BlockState newState, boolean isMoving) {
+        if (state.getBlock() != newState.getBlock()) {
+            TileEntityMelter tileentity = (TileEntityMelter) worldIn.getTileEntity(pos);
+            tileentity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(h -> {
+                BlockUtils.dropContents(worldIn, pos, h);
+            });
+            worldIn.updateComparatorOutputLevel(pos, this);
+            super.onReplaced(state, worldIn, pos, newState, isMoving);
+        }
     }
 
     @Nullable

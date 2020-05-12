@@ -1,7 +1,10 @@
 package minestrapp;
 
 import minestrapp.config.Config;
-import minestrapp.containers.ContainerTypes;
+import minestrapp.init.ContainerTypes;
+import minestrapp.init.MBlocks;
+import minestrapp.init.MItems;
+import minestrapp.init.MPotions;
 import minestrapp.proxy.ClientProxy;
 import minestrapp.proxy.ServerProxy;
 import minestrapp.recipes.Recipes;

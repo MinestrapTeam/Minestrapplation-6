@@ -1,7 +1,7 @@
 package minestrapp.worldgen;
 
 import com.mojang.datafixers.Dynamic;
-import minestrapp.MBlocks;
+import minestrapp.init.MBlocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.gen.ChunkGenerator;

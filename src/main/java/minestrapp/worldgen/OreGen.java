@@ -1,6 +1,6 @@
 package minestrapp.worldgen;
 
-import minestrapp.MBlocks;
+import minestrapp.init.MBlocks;
 import minestrapp.Minestrapp;
 import minestrapp.config.Config;
 import net.minecraft.world.biome.Biome;

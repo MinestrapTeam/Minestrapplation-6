@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.items.IItemHandler;
 
 public class BlockUtils {
 
@@ -49,5 +50,11 @@ public class BlockUtils {
             return true;
         }
         return false;
+    }
+
+    public static void dropContents(World world, BlockPos pos, IItemHandler h){
+        for(int slot  = 0; slot < h.getSlots(); slot++){
+            Block.spawnAsEntity(world, pos, h.getStackInSlot(slot));
+        }
     }
 }

@@ -41,7 +41,7 @@ public class TileEntityMelter extends TileEntity implements ITickableTileEntity,
 
 
     public int burnTime;
-    public int bunrTimeTotal;
+    public int burnTimeTotal;
     public int cookTime;
     public int cookTimeTotal = 200;
 
@@ -67,31 +67,35 @@ public class TileEntityMelter extends TileEntity implements ITickableTileEntity,
                     cookTime = 0;
                 }
 
-                if(this.getBurnTime(fuel) > 0 && this.burnTime == 0){
-                    this.burnTime = this.getBurnTime(fuel);
-                    this.bunrTimeTotal = burnTime;
-                    fuel.shrink(1);
-                }
-
                 if(canMelt(recipe, (IItemHandlerModifiable) h)){
-                    cookTime++;
+
+                    if(this.getBurnTime(fuel) > 0 && !this.isBurning()){
+                        this.burnTime = this.getBurnTime(fuel);
+                        this.burnTimeTotal = burnTime;
+                        fuel.shrink(1);
+                    }
+
+                    if(isBurning()){
+                        cookTime++;
+                    }
+
                     if(cookTime >= cookTimeTotal){
                         h.getStackInSlot(INPUT_SLOT).shrink(1);
                         if(recipe.needsBucket()) {
                             bucket.shrink(1);
                         }
                         if(output.isEmpty()){
-                            ((IItemHandlerModifiable) h).setStackInSlot(OUTPUT_SLOT, recipe.getRecipeOutput());
+                            ((IItemHandlerModifiable) h).setStackInSlot(OUTPUT_SLOT, recipe.getRecipeOutput().copy());
                         }
                         output.grow(1);
                         cookTime = 0;
                     }
                 }
-                if(burnTime > 0) {
-                    burnTime--;
-                }
-                this.markDirty();
             }
+            if(burnTime > 0) {
+                burnTime--;
+            }
+            this.markDirty();
         });
 
     }
@@ -106,10 +110,6 @@ public class TileEntityMelter extends TileEntity implements ITickableTileEntity,
             ItemStack output = h.getStackInSlot(OUTPUT_SLOT);
             ItemStack fuel = h.getStackInSlot(FUEL_SLOT);
             ItemStack bucket = h.getStackInSlot(BUCKET_SLOT);
-
-            if(!isBurning()){
-                return false;
-            }
 
             if(recipe.getRecipeOutput().getItem() != output.getItem() && !output.isEmpty()){
                 return false;
@@ -162,7 +162,7 @@ public class TileEntityMelter extends TileEntity implements ITickableTileEntity,
     }
 
     private IItemHandlerModifiable createHandler(){
-        return new ItemStackHandler(4){
+        return new ItemStackHandler(3){
             @Override
             public boolean isItemValid(int slot, @Nonnull ItemStack stack) {
 

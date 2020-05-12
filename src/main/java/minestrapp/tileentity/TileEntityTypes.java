@@ -1,6 +1,6 @@
 package minestrapp.tileentity;
 
-import minestrapp.MBlocks;
+import minestrapp.init.MBlocks;
 import minestrapp.Reference;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.fml.RegistryObject;

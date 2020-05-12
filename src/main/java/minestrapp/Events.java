@@ -1,6 +1,8 @@
 package minestrapp;
 
 import minestrapp.config.Config;
+import minestrapp.init.MBlocks;
+import minestrapp.init.MItems;
 import minestrapp.utils.EntityUtils;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.Minecraft;

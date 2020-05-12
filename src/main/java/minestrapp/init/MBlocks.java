@@ -1,5 +1,6 @@
-package minestrapp;
+package minestrapp.init;
 
+import minestrapp.Reference;
 import minestrapp.blocks.*;
 import minestrapp.blocks.crops.*;
 import net.minecraft.block.Block;

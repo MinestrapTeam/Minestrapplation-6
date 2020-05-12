@@ -1,5 +1,6 @@
-package minestrapp;
+package minestrapp.init;
 
+import minestrapp.Reference;
 import minestrapp.items.*;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;

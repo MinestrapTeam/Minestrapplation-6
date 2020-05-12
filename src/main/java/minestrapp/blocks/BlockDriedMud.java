@@ -1,6 +1,6 @@
 package minestrapp.blocks;
 
-import minestrapp.MBlocks;
+import minestrapp.init.MBlocks;
 import minestrapp.utils.BlockUtils;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

@@ -1,6 +1,6 @@
 package minestrapp.items;
 
-import minestrapp.MItems;
+import minestrapp.init.MItems;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.crafting.Ingredient;

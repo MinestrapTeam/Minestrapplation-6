@@ -1,5 +1,6 @@
 package minestrapp.containers;
 
+import minestrapp.init.ContainerTypes;
 import minestrapp.tileentity.TileEntityMelter;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -75,12 +76,13 @@ public class ContainerMelter extends Container {
         if (slot != null && slot.getHasStack()) {
             ItemStack stack = slot.getStack();
             itemstack = stack.copy();
-            if (index == 0) {
-                if (!this.mergeItemStack(stack, 1, 37, true)) {
+            if (index == 3) {
+                if (!this.mergeItemStack(stack, 4, 37, true)) {
                     return ItemStack.EMPTY;
                 }
+
                 slot.onSlotChange(stack, itemstack);
-            } else {
+            } else if(index != 0 && index != 1 && index != 2){
                 if (stack.getItem() == Items.BUCKET) {
                     if (!this.mergeItemStack(stack, 2, 3, false)) {
                         return ItemStack.EMPTY;
@@ -96,6 +98,8 @@ public class ContainerMelter extends Container {
                 } else if (index < 37 && !this.mergeItemStack(stack, 1, 28, false)) {
                     return ItemStack.EMPTY;
                 }
+            } else if (!this.mergeItemStack(stack, 4, 37, false)) {
+                return ItemStack.EMPTY;
             }
 
             if (stack.isEmpty()) {

@@ -1,5 +1,6 @@
 package minestrapp;
 
+import minestrapp.init.MBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 

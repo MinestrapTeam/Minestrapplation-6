@@ -1,7 +1,7 @@
 package minestrapp.proxy;
 
-import minestrapp.MBlocks;
-import minestrapp.containers.ContainerTypes;
+import minestrapp.init.MBlocks;
+import minestrapp.init.ContainerTypes;
 import minestrapp.gui.MelterGui;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScreenManager;
