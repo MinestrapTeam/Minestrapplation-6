@@ -3,6 +3,7 @@ package minestrapp.init;
 import minestrapp.Reference;
 import minestrapp.blocks.*;
 import minestrapp.blocks.crops.*;
+import minestrapp.blocks.machines.BlockMelter;
 import net.minecraft.block.Block;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.material.Material;

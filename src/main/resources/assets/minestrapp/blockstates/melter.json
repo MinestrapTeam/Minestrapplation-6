@@ -1,7 +1,8 @@
 {
     "variants": {
-        "": [
-            { "model": "minestrapp:block/melter" }
-        ]
+        "facing=north": { "model": "minestrapp:block/melter" },
+        "facing=south": { "model": "minestrapp:block/melter", "y": 180 },
+        "facing=west":  { "model": "minestrapp:block/melter", "y": 270 },
+        "facing=east":  { "model": "minestrapp:block/melter", "y": 90 }
     }
 }

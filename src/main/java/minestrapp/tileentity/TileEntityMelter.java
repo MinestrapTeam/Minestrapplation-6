@@ -30,14 +30,15 @@ import net.minecraftforge.items.wrapper.RecipeWrapper;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-
 public class TileEntityMelter extends TileEntity implements ITickableTileEntity, INamedContainerProvider {
 
-    private LazyOptional<IItemHandler> handler = LazyOptional.of(this::createHandler);
+    public LazyOptional<IItemHandler> handler = LazyOptional.of(this::createHandler);
     private final int INPUT_SLOT = 0;
     private final int FUEL_SLOT = 1;
     private final int BUCKET_SLOT = 2;
-    private final int OUTPUT_SLOT = 3;
+
+    public LazyOptional<IItemHandler> output_handler = LazyOptional.of(this::createOutHandler);
+    private final int OUTPUT_SLOT = 0;
 
 
     public int burnTime;
@@ -55,19 +56,24 @@ public class TileEntityMelter extends TileEntity implements ITickableTileEntity,
 
     @Override
     public void tick() {
-        handler.ifPresent(h ->{
-            MelterRecipe recipe = world.getRecipeManager().getRecipe(MelterRecipe.melter, new RecipeWrapper((IItemHandlerModifiable) h), world).orElse(null);
+        IItemHandlerModifiable h = (IItemHandlerModifiable) handler.orElse(null);
+        IItemHandlerModifiable out_h = (IItemHandlerModifiable) output_handler.orElse(null);
+        RecipeWrapper rw = new RecipeWrapper(h);
+
+            MelterRecipe recipe = world.getRecipeManager().getRecipe(MelterRecipe.melter, rw, world).orElse(null);
+
+            ItemStack input = h.getStackInSlot(INPUT_SLOT);
+            ItemStack output = out_h.getStackInSlot(OUTPUT_SLOT);
+            ItemStack fuel = h.getStackInSlot(FUEL_SLOT);
+            ItemStack bucket = h.getStackInSlot(BUCKET_SLOT);
+
+            if(input.isEmpty()){
+                this.cookTime = 0;
+            }
+
             if(recipe != null){
-                ItemStack input = h.getStackInSlot(INPUT_SLOT);
-                ItemStack output = h.getStackInSlot(OUTPUT_SLOT);
-                ItemStack fuel = h.getStackInSlot(FUEL_SLOT);
-                ItemStack bucket = h.getStackInSlot(BUCKET_SLOT);
 
-                if(input.isEmpty()){
-                    cookTime = 0;
-                }
-
-                if(canMelt(recipe, (IItemHandlerModifiable) h)){
+                if(canMelt(recipe, h, out_h)){
 
                     if(this.getBurnTime(fuel) > 0 && !this.isBurning()){
                         this.burnTime = this.getBurnTime(fuel);
@@ -85,7 +91,7 @@ public class TileEntityMelter extends TileEntity implements ITickableTileEntity,
                             bucket.shrink(1);
                         }
                         if(output.isEmpty()){
-                            ((IItemHandlerModifiable) h).setStackInSlot(OUTPUT_SLOT, recipe.getRecipeOutput().copy());
+                            out_h.setStackInSlot(OUTPUT_SLOT, recipe.getRecipeOutput().copy());
                         }
                         output.grow(1);
                         cookTime = 0;
@@ -96,19 +102,15 @@ public class TileEntityMelter extends TileEntity implements ITickableTileEntity,
                 burnTime--;
             }
             this.markDirty();
-        });
-
     }
 
     public boolean isBurning(){
         return burnTime > 0;
     }
 
-    private boolean canMelt(MelterRecipe recipe, IItemHandlerModifiable h){
+    private boolean canMelt(MelterRecipe recipe, IItemHandlerModifiable h, IItemHandlerModifiable out){
         if(recipe != null){
-            ItemStack input = h.getStackInSlot(INPUT_SLOT);
-            ItemStack output = h.getStackInSlot(OUTPUT_SLOT);
-            ItemStack fuel = h.getStackInSlot(FUEL_SLOT);
+            ItemStack output = out.getStackInSlot(OUTPUT_SLOT);
             ItemStack bucket = h.getStackInSlot(BUCKET_SLOT);
 
             if(recipe.getRecipeOutput().getItem() != output.getItem() && !output.isEmpty()){
@@ -143,8 +145,10 @@ public class TileEntityMelter extends TileEntity implements ITickableTileEntity,
 
     @Override
     public void read(CompoundNBT tag){
-        CompoundNBT inv = tag.getCompound("inv");
-        handler.ifPresent(h -> ((INBTSerializable<CompoundNBT>)h).deserializeNBT(inv));
+        CompoundNBT inputs = tag.getCompound("inputs");
+        CompoundNBT output = tag.getCompound("output");
+        handler.ifPresent(h -> ((INBTSerializable<CompoundNBT>)h).deserializeNBT(inputs));
+        output_handler.ifPresent(h -> ((INBTSerializable<CompoundNBT>)h).deserializeNBT(output));
         burnTime = tag.getInt("burnTime");
         cookTime = tag.getInt("cookTime");
         super.read(tag);
@@ -154,7 +158,11 @@ public class TileEntityMelter extends TileEntity implements ITickableTileEntity,
     public CompoundNBT write(CompoundNBT tag) {
         handler.ifPresent(h -> {
             CompoundNBT compound = ((INBTSerializable<CompoundNBT>)h).serializeNBT();
-            tag.put("inv", compound);
+            tag.put("inputs", compound);
+        });
+        output_handler.ifPresent(h -> {
+            CompoundNBT compound = ((INBTSerializable<CompoundNBT>)h).serializeNBT();
+            tag.put("output", compound);
         });
         tag.putInt("burnTime", burnTime);
         tag.putInt("cookTime", cookTime);
@@ -166,9 +174,7 @@ public class TileEntityMelter extends TileEntity implements ITickableTileEntity,
             @Override
             public boolean isItemValid(int slot, @Nonnull ItemStack stack) {
 
-                if(slot == OUTPUT_SLOT){
-                    return false;
-                } else if(slot == BUCKET_SLOT && stack.getItem() != Items.BUCKET){
+                if(slot == BUCKET_SLOT && stack.getItem() != Items.BUCKET){
                     return false;
                 } else if(slot == FUEL_SLOT && getBurnTime(stack) <= 0){
                     return false;
@@ -196,9 +202,38 @@ public class TileEntityMelter extends TileEntity implements ITickableTileEntity,
         };
     }
 
+    private IItemHandlerModifiable createOutHandler(){
+        return new ItemStackHandler(1){
+            @Override
+            public boolean isItemValid(int slot, @Nonnull ItemStack stack) {
+                return false;
+            }
+
+            @Nonnull
+            @Override
+            public ItemStack insertItem(int slot, @Nonnull ItemStack stack, boolean simulate) {
+                return super.insertItem(slot, stack, simulate);
+            }
+
+            @Override
+            @Nonnull
+            public ItemStack extractItem(int slot, int amount, boolean simulate){
+                return super.extractItem(slot, amount, simulate);
+            }
+
+            @Override
+            protected void onContentsChanged(int slot) {
+                markDirty();
+            }
+        };
+    }
+
     @Nonnull
     @Override
     public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @Nullable Direction side) {
+        if((side == Direction.DOWN  || side == Direction.UP) && cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY){
+            return output_handler.cast();
+        }
         if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
             return handler.cast();
         }

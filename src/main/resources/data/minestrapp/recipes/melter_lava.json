@@ -1,7 +1,7 @@
 {
   "type": "minestrapp:melter",
   "ingredient": {
-    "item": "minecraft:iron_ingot"
+    "tag": "minestrapp:meltable_lava"
   },
   "result": {
     "item": "minecraft:lava_bucket"

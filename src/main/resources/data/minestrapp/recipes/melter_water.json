@@ -1,0 +1,10 @@
+{
+  "type": "minestrapp:melter",
+  "ingredient": {
+    "tag": "minestrapp:meltable_water"
+  },
+  "result": {
+    "item": "minecraft:water_bucket"
+  },
+  "bucket": true
+}

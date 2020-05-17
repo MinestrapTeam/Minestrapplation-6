@@ -89,6 +89,7 @@ public class MItems {
 	public static final RegistryObject<Item> HEALTH_CRYSTAL = register("health_crystal", () -> new ItemHealthCrystal(new Item.Properties().maxStackSize(1).maxDamage(1).group(Reference.minestrapp)));
 	public static final RegistryObject<Item> SMELLING_SALTS = register("smelling_salts", () -> new ItemSmellingSalts(new Item.Properties().maxStackSize(1).maxDamage(1).group(Reference.minestrapp)));
 	public static final RegistryObject<Item> SOUL_GEM = register("gem_soul", () -> new ItemSoulGem(new Item.Properties().maxStackSize(1).maxDamage(1).group(Reference.minestrapp)));
+	public static final RegistryObject<Item> TOTEM_WEATHER = register("totem_of_weather", () -> new ItemTotemWeather(new Item.Properties().maxStackSize(1).maxDamage(1).group(Reference.minestrapp)));
 
 	public static <T extends Item> RegistryObject<T> register(String name, Supplier<? extends T> e){
 		return ITEM_REGISTRY.register(name , e);

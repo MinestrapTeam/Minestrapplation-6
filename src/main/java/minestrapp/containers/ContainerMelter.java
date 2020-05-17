@@ -11,7 +11,6 @@ import net.minecraft.item.Items;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeHooks;
-import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
@@ -28,12 +27,14 @@ public class ContainerMelter extends Container {
         this.player = player;
         this.playerInv = new InvWrapper(inv);
 
-        te.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(h -> {
-            addSlot(new SlotItemHandler(h, 0 , 56, 17));
-            addSlot(new SlotItemHandler(h, 1 , 47, 53));
-            addSlot(new SlotItemHandler(h, 2 , 66, 53));
-            addSlot(new SlotItemHandler(h, 3 , 116, 35));
-        });
+        IItemHandler h = te.handler.orElse(null);
+        IItemHandler out = te.output_handler.orElse(null);
+
+        addSlot(new SlotItemHandler(h, 0 , 56, 17));
+        addSlot(new SlotItemHandler(h, 1 , 47, 53));
+        addSlot(new SlotItemHandler(h, 2 , 66, 53));
+        addSlot(new SlotItemHandler(out, 0 , 116, 35));
+
         layoutPlayerInventorySlots(8,84);
     }
 
@@ -68,7 +69,6 @@ public class ContainerMelter extends Container {
         return true;
     }
 
-    //TODO improve shift clicking and fix duping
     @Override
     public ItemStack transferStackInSlot(PlayerEntity playerIn, int index) {
         ItemStack itemstack = ItemStack.EMPTY;
