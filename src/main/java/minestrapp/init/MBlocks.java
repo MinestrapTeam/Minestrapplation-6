@@ -41,7 +41,7 @@ public class MBlocks {
 	public static final RegistryObject<Block> SLAB_DEEPSTONE = registerBlock("slab_deepstone", () -> new SlabBlock(Block.Properties.create(Material.ROCK)));
 
 	//Ores
-	public static final RegistryObject<Block> ORE_TIN = registerBlock("ore_tin", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)));
+	public static final RegistryObject<Block> ORE_TIN = registerBlock("ore_tin", () -> new BlockStoneBase(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)));
 	public static final RegistryObject<Block> ORE_TITANIUM = registerBlock("ore_titanium", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)));
 	public static final RegistryObject<Block> ORE_COPPER = registerBlock("ore_copper", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)));
 	public static final RegistryObject<Block> ORE_MEURODITE = registerBlock("ore_meurodite", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)));
@@ -83,14 +83,14 @@ public class MBlocks {
 	public static final RegistryObject<Block> MITE_HONEY = registerBlock("mite_honey", () -> new BlockMiteHoney(Block.Properties.create(Material.EARTH).hardnessAndResistance(0.7F).harvestTool(ToolType.SHOVEL)));
 	public static final RegistryObject<Block> CANDLE = registerBlock("candle", () -> new BlockCandle(Block.Properties.create(Material.EARTH)));
 
-	private static <T extends Block> RegistryObject<T> registerBlockOnly(String name, Supplier<? extends T> block){
-		RegistryObject<T> object = BLOCK_REGISTRY.register(name, block);
-		return object;
-	}
-
 	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<? extends T> block){
 		RegistryObject<T> object = BLOCK_REGISTRY.register(name, block);
 		BLOCK_ITEM_REGISTRY.register(name, registerBlockItem(object));
+		return object;
+	}
+
+	private static <T extends Block> RegistryObject<T> registerBlockOnly(String name, Supplier<? extends T> block){
+		RegistryObject<T> object = BLOCK_REGISTRY.register(name, block);
 		return object;
 	}
 
