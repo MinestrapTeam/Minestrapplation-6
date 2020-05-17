@@ -1,10 +1,13 @@
 modLoader="javafml" #mandatory
 loaderVersion="[25,)"
+issueTrackerURL="https://github.com/MinestrapTeam/Minestrappolation-6/issues"
+logoFile="logo.png"
 
 [[mods]]
-modId="minestrapp"
-version="${version}"
-displayName="Minetrappolation"
-description='''
-A vanilla overhaul
-'''
+    modId="minestrapp"
+    version="${version}"
+    displayName="Minestrappolation 6"
+    authors="Code: TheWerty1124, Art & Design: Delocuro"
+    description='''
+A Vanilla-faithful survival overhaul.
+    '''
