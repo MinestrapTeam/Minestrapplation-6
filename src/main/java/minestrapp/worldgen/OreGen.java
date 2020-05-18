@@ -32,28 +32,28 @@ public class OreGen {
                         new CountRangeConfig(100, 75, 75, 255))));
             }
 
-
+            int vein_size = 35;
             if(biome.getTempCategory() == Biome.TempCategory.COLD){
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.withConfiguration(
-                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, MBlocks.GLACIERROCK.get().getDefaultState(), 50)).withPlacement(Placement.COUNT_RANGE.configure(
+                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, MBlocks.GLACIERROCK.get().getDefaultState(), vein_size)).withPlacement(Placement.COUNT_RANGE.configure(
                         new CountRangeConfig(100, 0, 75, 255))));
             }
 
             if(biome.getTempCategory() == Biome.TempCategory.WARM){
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.withConfiguration(
-                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, MBlocks.REDROCK.get().getDefaultState(), 50)).withPlacement(Placement.COUNT_RANGE.configure(
+                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, MBlocks.REDROCK.get().getDefaultState(), vein_size)).withPlacement(Placement.COUNT_RANGE.configure(
                         new CountRangeConfig(100, 0, 75, 255))));
             }
 
             if(biome.getTempCategory() == Biome.TempCategory.OCEAN){
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.withConfiguration(
-                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, MBlocks.OCEANSTONE.get().getDefaultState(), 50)).withPlacement(Placement.COUNT_RANGE.configure(
+                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, MBlocks.OCEANSTONE.get().getDefaultState(), vein_size)).withPlacement(Placement.COUNT_RANGE.configure(
                         new CountRangeConfig(100, 0, 75, 255))));
             }
 
             if(biome.getTempCategory() == Biome.TempCategory.MEDIUM){
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.withConfiguration(
-                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, MBlocks.DEEPSTONE.get().getDefaultState(), 50)).withPlacement(Placement.COUNT_RANGE.configure(
+                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, MBlocks.DEEPSTONE.get().getDefaultState(), vein_size)).withPlacement(Placement.COUNT_RANGE.configure(
                         new CountRangeConfig(100, 0, 75, 255))));
             }
 

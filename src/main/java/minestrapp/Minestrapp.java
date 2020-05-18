@@ -7,7 +7,7 @@ import minestrapp.init.MItems;
 import minestrapp.init.MPotions;
 import minestrapp.proxy.ClientProxy;
 import minestrapp.proxy.ServerProxy;
-import minestrapp.recipes.Recipes;
+import minestrapp.init.Recipes;
 import minestrapp.tileentity.TileEntityTypes;
 import minestrapp.worldgen.OreGen;
 import net.minecraftforge.fml.DistExecutor;

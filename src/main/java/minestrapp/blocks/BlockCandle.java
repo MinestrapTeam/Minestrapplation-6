@@ -34,7 +34,7 @@ public class BlockCandle extends Block implements ITileEntityProvider {
 
     public static final BooleanProperty LIT = BooleanProperty.create("lit");
 
-    public int increment = 5;
+    private int increment = 5;
 
     public BlockCandle(Block.Properties prop){
         super(prop);
@@ -47,10 +47,8 @@ public class BlockCandle extends Block implements ITileEntityProvider {
 
         Item heldItem = player.getHeldItem(handIn).getItem();
 
-
-        //TODO figure out why crouch right click doesnt work when holding item -- also see the Events class
+        //TODO figure out why crouch right click doesn't work when holding item -- also see the Events class
         if(player.isCrouching()){
-            System.out.println("Crouching");
             if(heldItem instanceof DyeItem){
                 DyeItem dye = (DyeItem) heldItem;
                 candle.setColor(new Color(dye.getDyeColor().getColorValue()));
@@ -70,8 +68,6 @@ public class BlockCandle extends Block implements ITileEntityProvider {
             }
         }
 
-
-
         if(heldItem == Items.FLINT_AND_STEEL){
            worldIn.setBlockState(pos, state.with(LIT, Boolean.valueOf(true)), 2);
         }
@@ -90,7 +86,6 @@ public class BlockCandle extends Block implements ITileEntityProvider {
         double d0 = (double)pos.getX() + 0.5D;
         double d1 = (double)pos.getY() + 0.5D;
         double d2 = (double)pos.getZ() + 0.5D;
-
         if(stateIn.get(LIT)){
             worldIn.addParticle(ParticleTypes.FLAME, d0, d1, d2, 0.0D, 0.0D, 0.0D);
         }

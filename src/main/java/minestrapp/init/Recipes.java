@@ -1,6 +1,8 @@
-package minestrapp.recipes;
+package minestrapp.init;
 
 import minestrapp.Reference;
+import minestrapp.recipes.MelterRecipe;
+import minestrapp.recipes.MelterRecipeSerializer;
 import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;

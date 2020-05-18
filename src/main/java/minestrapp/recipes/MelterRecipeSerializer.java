@@ -16,12 +16,11 @@ import javax.annotation.Nullable;
 
 public class MelterRecipeSerializer<T extends MelterRecipe> extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<T> {
 
-    private final MelterRecipeSerializer.IFactory<T> factory;
+    public final MelterRecipeSerializer.IFactory<T> factory;
 
     public MelterRecipeSerializer(MelterRecipeSerializer.IFactory<T> factory) {
         this.factory = factory;
     }
-
 
     @Override
     public T read(ResourceLocation recipeId, JsonObject json) {
@@ -35,7 +34,9 @@ public class MelterRecipeSerializer<T extends MelterRecipe> extends ForgeRegistr
         } else {
             String sl = JSONUtils.getString(json, "result");
             ResourceLocation rl = new ResourceLocation(sl);
-            itemStack = new ItemStack(Registry.ITEM.getValue(rl).get());
+            itemStack = new ItemStack(Registry.ITEM.getValue(rl).orElseThrow(() ->{
+                return new IllegalStateException("Item does not exist");
+            }));
         }
 
         boolean bucket = JSONUtils.getBoolean(json, "bucket");
@@ -49,8 +50,6 @@ public class MelterRecipeSerializer<T extends MelterRecipe> extends ForgeRegistr
         String s = buffer.readString(32767);
         Ingredient ingredient = Ingredient.read(buffer);
         ItemStack itemstack = buffer.readItemStack();
-        float f = buffer.readFloat();
-        int i = buffer.readVarInt();
         boolean bucket = buffer.readBoolean();
 
         return this.factory.create(recipeId, s, ingredient, itemstack, bucket);
@@ -65,7 +64,7 @@ public class MelterRecipeSerializer<T extends MelterRecipe> extends ForgeRegistr
         buffer.writeBoolean(recipe.needsBucket);
     }
 
-    interface IFactory<T extends MelterRecipe> {
+    public interface IFactory<T extends MelterRecipe> {
         T create(ResourceLocation resourceLocation, String group, Ingredient ingredient, ItemStack result, boolean needsBucket);
     }
 

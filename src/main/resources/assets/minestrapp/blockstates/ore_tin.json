@@ -1,33 +1,6 @@
 {
     "variants": {
-        "variant=red_rock": [
-            { "model": "minestrapp:block/ore_tin_red_rock" }
-        ],
-        "variant=deep_red_rock": [
-            { "model": "minestrapp:block/ore_tin_deep_red_rock" }
-        ],
-        "variant=deepstone": [
-            { "model": "minestrapp:block/ore_tin_deepstone" }
-        ],
-        "variant=coldstone": [
-            { "model": "minestrapp:block/ore_tin_coldstone" }
-        ],
-        "variant=deep_coldstone": [
-            { "model": "minestrapp:block/ore_tin_deep_coldstone" }
-        ],
-        "variant=icestone": [
-            { "model": "minestrapp:block/ore_tin_icestone" }
-        ],
-        "variant=glacierrock": [
-            { "model": "minestrapp:block/ore_tin_glacierrock" }
-        ],
-        "variant=oceanstone": [
-            { "model": "minestrapp:block/ore_tin_oceanstone" }
-        ],
-        "variant=deep_oceanstone": [
-            { "model": "minestrapp:block/ore_tin_deep_oceanstone" }
-        ],
-        "variant=stone": [
+        "": [
             { "model": "minestrapp:block/ore_tin_stone" }
         ]
     }

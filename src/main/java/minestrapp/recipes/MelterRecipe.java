@@ -1,5 +1,6 @@
 package minestrapp.recipes;
 
+import minestrapp.init.Recipes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.IRecipeSerializer;
