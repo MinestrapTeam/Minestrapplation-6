@@ -1,0 +1,8 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "top": "minestrapp:blocks/machines/melter_top",
+        "front": "minestrapp:blocks/machines/melter_front_on",
+        "side": "minestrapp:blocks/machines/melter_side"
+    }
+}

@@ -1,9 +1,12 @@
 package minestrapp.proxy;
 
 import minestrapp.blocks.BlockCandle;
+import minestrapp.gui.BackpackGui;
 import minestrapp.gui.MelterGui;
 import minestrapp.init.ContainerTypes;
 import minestrapp.init.MBlocks;
+import minestrapp.init.MItems;
+import minestrapp.items.ItemBackpack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
@@ -34,6 +37,7 @@ public class ClientProxy extends ServerProxy{
 		RenderTypeLookup.setRenderLayer(MBlocks.CANDLE.get(), RenderType.getCutout());
 
 		ScreenManager.registerFactory(ContainerTypes.MELTER_CONTAINER.get(), MelterGui::new);
+		ScreenManager.registerFactory(ContainerTypes.BACKPACK_CONTAINER.get(), BackpackGui::new);
 	}
 
 	@Override
@@ -48,8 +52,13 @@ public class ClientProxy extends ServerProxy{
 
 
 	@SubscribeEvent
-	public static void registerColorHandler(ColorHandlerEvent.Block event){
+	public static void registerBlockColorHandler(ColorHandlerEvent.Block event){
 		event.getBlockColors().register(new BlockCandle.ColorHandler(), MBlocks.CANDLE.get());
+	}
+
+	@SubscribeEvent
+	public static void registerItemColorHandler(ColorHandlerEvent.Item event){
+		event.getItemColors().register(new ItemBackpack.ColorHandler(), MItems.BACKPACK.get());
 	}
 
 }

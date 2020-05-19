@@ -1,13 +1,9 @@
 package minestrapp;
 
 import minestrapp.config.Config;
-import minestrapp.init.ContainerTypes;
-import minestrapp.init.MBlocks;
-import minestrapp.init.MItems;
-import minestrapp.init.MPotions;
+import minestrapp.init.*;
 import minestrapp.proxy.ClientProxy;
 import minestrapp.proxy.ServerProxy;
-import minestrapp.init.Recipes;
 import minestrapp.tileentity.TileEntityTypes;
 import minestrapp.worldgen.OreGen;
 import net.minecraftforge.fml.DistExecutor;
@@ -52,6 +48,8 @@ public class Minestrapp {
 
 		MPotions.POTION_REGISTRY.register(FMLJavaModLoadingContext.get().getModEventBus());
 		MPotions.EFFECT_REGISTRY.register(FMLJavaModLoadingContext.get().getModEventBus());
+
+		MEnchaments.ENCHANTMENTS.register(FMLJavaModLoadingContext.get().getModEventBus());
 	}
 
 	private void setup(final FMLCommonSetupEvent event) {

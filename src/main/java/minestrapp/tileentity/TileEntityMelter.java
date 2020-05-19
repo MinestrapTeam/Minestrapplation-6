@@ -1,5 +1,6 @@
 package minestrapp.tileentity;
 
+import minestrapp.blocks.machines.BlockMelter;
 import minestrapp.containers.ContainerMelter;
 import minestrapp.recipes.MelterRecipe;
 import net.minecraft.entity.player.PlayerEntity;
@@ -56,6 +57,7 @@ public class TileEntityMelter extends TileEntity implements ITickableTileEntity,
 
     @Override
     public void tick() {
+        boolean flag = this.isBurning();
         IItemHandlerModifiable h = (IItemHandlerModifiable) handler.orElse(null);
         IItemHandlerModifiable out_h = (IItemHandlerModifiable) output_handler.orElse(null);
         RecipeWrapper rw = new RecipeWrapper(h);
@@ -83,6 +85,10 @@ public class TileEntityMelter extends TileEntity implements ITickableTileEntity,
 
                     if(isBurning()){
                         cookTime++;
+                    }
+
+                    if(flag != this.isBurning()){
+                        this.world.setBlockState(pos, this.world.getBlockState(pos).with(BlockMelter.LIT, Boolean.valueOf(isBurning())), 3);
                     }
 
                     if(cookTime >= cookTimeTotal){

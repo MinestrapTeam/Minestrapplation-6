@@ -1,0 +1,7 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "minestrapp:items/backpack",
+	   "layer1": "minestrapp:items/backpack_dyeable"
+    }
+}
