@@ -55,18 +55,18 @@ public class MItems {
 
 
 	//Ingots, Gems, and chunks
-	public static final RegistryObject<Item> INGOT_TIN = register("ingot_tin", () -> new Item((new Item.Properties()).group(Reference.minerals)));
-	public static final RegistryObject<Item> INGOT_TITANIUM = register("ingot_titanium", () -> new Item((new Item.Properties()).group(Reference.minerals)));
-	public static final RegistryObject<Item> INGOT_COPPER = register("ingot_copper", () -> new Item((new Item.Properties()).group(Reference.minerals)));
-	public static final RegistryObject<Item> GEM_MEURODITE = register("gem_meurodite", () -> new Item((new Item.Properties()).group(Reference.minerals)));
-	public static final RegistryObject<Item> INGOT_TORITE = register("ingot_torite", () -> new Item((new Item.Properties()).group(Reference.minerals)));
-	public static final RegistryObject<Item> IRRADIUM = register("irradium", () -> new Item((new Item.Properties()).group(Reference.minerals)));
-	public static final RegistryObject<Item> CHUNK_REDROCK = register("chunk_redrock", () -> new Item((new Item.Properties().group(Reference.minerals))));
-	public static final RegistryObject<Item> CHUNK_STONE = register("chunk_stone", () -> new Item((new Item.Properties().group(Reference.minerals))));
-	public static final RegistryObject<Item> CHUNK_COLDSTONE = register("chunk_coldstone", () -> new Item((new Item.Properties().group(Reference.minerals))));
-	public static final RegistryObject<Item> CHUNK_ICESTONE = register("chunk_icestone", () -> new Item((new Item.Properties().group(Reference.minerals))));
-	public static final RegistryObject<Item> CHUNK_OCEANSTONE = register("chunk_oceanstone", () -> new Item((new Item.Properties().group(Reference.minerals))));
-	public static final RegistryObject<Item> CHUNK_NETHERRACK = register("chunk_netherrack", () -> new Item((new Item.Properties().group(Reference.minerals))));
+	public static final RegistryObject<Item> INGOT_TIN = register("ingot_tin", () -> new Item((new Item.Properties()).group(Reference.resource)));
+	public static final RegistryObject<Item> INGOT_TITANIUM = register("ingot_titanium", () -> new Item((new Item.Properties()).group(Reference.resource)));
+	public static final RegistryObject<Item> INGOT_COPPER = register("ingot_copper", () -> new Item((new Item.Properties()).group(Reference.resource)));
+	public static final RegistryObject<Item> GEM_MEURODITE = register("gem_meurodite", () -> new Item((new Item.Properties()).group(Reference.resource)));
+	public static final RegistryObject<Item> INGOT_TORITE = register("ingot_torite", () -> new Item((new Item.Properties()).group(Reference.resource)));
+	public static final RegistryObject<Item> IRRADIUM = register("irradium", () -> new Item((new Item.Properties()).group(Reference.resource)));
+	public static final RegistryObject<Item> CHUNK_REDROCK = register("chunk_redrock", () -> new Item((new Item.Properties().group(Reference.resource))));
+	public static final RegistryObject<Item> CHUNK_STONE = register("chunk_stone", () -> new Item((new Item.Properties().group(Reference.resource))));
+	public static final RegistryObject<Item> CHUNK_COLDSTONE = register("chunk_coldstone", () -> new Item((new Item.Properties().group(Reference.resource))));
+	public static final RegistryObject<Item> CHUNK_ICESTONE = register("chunk_icestone", () -> new Item((new Item.Properties().group(Reference.resource))));
+	public static final RegistryObject<Item> CHUNK_OCEANSTONE = register("chunk_oceanstone", () -> new Item((new Item.Properties().group(Reference.resource))));
+	public static final RegistryObject<Item> CHUNK_NETHERRACK = register("chunk_netherrack", () -> new Item((new Item.Properties().group(Reference.resource))));
 
 	//Food and Seeds
 	public static final RegistryObject<Item> CABBAGE = register("cabbage", () -> new Item((new Item.Properties()).group(Reference.food).food(MFoods.CABBAGE)));
@@ -77,10 +77,10 @@ public class MItems {
 	public static final RegistryObject<Item> PEANUT = register("peanuts", () -> new BlockNamedItem(MBlocks.CROP_PEANUT.get(), (new Item.Properties()).group(Reference.food).food(MFoods.PEANUT)));
 	public static final RegistryObject<Item> PEPPER = register("pepper", () -> new Item((new Item.Properties()).group(Reference.food).food(MFoods.PEPPER)));
 	public static final RegistryObject<Item> TOMATO = register("tomato", () -> new Item((new Item.Properties()).group(Reference.food).food(MFoods.TOMATO)));
-	public static final RegistryObject<Item> SEEDS_CABBAGE = register("cabbage_seeds", () -> new BlockNamedItem(MBlocks.CROP_CABBAGE.get(), (new Item.Properties()).group(Reference.plant)));
-	public static final RegistryObject<Item> SEEDS_CELERY = register("celery_seeds", () -> new BlockNamedItem(MBlocks.CROP_CELERY.get(), (new Item.Properties()).group(Reference.plant)));
-	public static final RegistryObject<Item> SEEDS_PEPPER = register("pepper_seeds", () -> new BlockNamedItem(MBlocks.CROP_PEPPER.get(), (new Item.Properties()).group(Reference.plant)));
-	public static final RegistryObject<Item> SEEDS_TOMATO = register("tomato_seeds", () -> new BlockNamedItem(MBlocks.CROP_TOMATO.get(), (new Item.Properties()).group(Reference.plant)));
+	public static final RegistryObject<Item> SEEDS_CABBAGE = register("cabbage_seeds", () -> new BlockNamedItem(MBlocks.CROP_CABBAGE.get(), (new Item.Properties()).group(Reference.food)));
+	public static final RegistryObject<Item> SEEDS_CELERY = register("celery_seeds", () -> new BlockNamedItem(MBlocks.CROP_CELERY.get(), (new Item.Properties()).group(Reference.food)));
+	public static final RegistryObject<Item> SEEDS_PEPPER = register("pepper_seeds", () -> new BlockNamedItem(MBlocks.CROP_PEPPER.get(), (new Item.Properties()).group(Reference.food)));
+	public static final RegistryObject<Item> SEEDS_TOMATO = register("tomato_seeds", () -> new BlockNamedItem(MBlocks.CROP_TOMATO.get(), (new Item.Properties()).group(Reference.food)));
 
 
 	//Misc

@@ -28,28 +28,28 @@ public class MBlocks {
 	public static final RegistryObject<Block> MELTER = registerBlock("melter", () -> new BlockMelter(Block.Properties.create(Material.ROCK)), Reference.utility);
 
 	// Stones
-	public static final RegistryObject<Block> REDROCK = registerBlock("redrock", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.stone);
-	public static final RegistryObject<Block> DEEP_REDROCK = registerBlock("deep_redrock", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.stone);
-	public static final RegistryObject<Block> DEEPSTONE = registerBlock("deepstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.stone);
-	public static final RegistryObject<Block> COLDSTONE = registerBlock("coldstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.stone);
-	public static final RegistryObject<Block> DEEP_COLDSTONE = registerBlock("deep_coldstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.stone);
-	public static final RegistryObject<Block> ICESTONE = registerBlock("icestone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.stone);
-	public static final RegistryObject<Block> GLACIERROCK = registerBlock("glacierrock", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.stone);
-	public static final RegistryObject<Block> OCEANSTONE = registerBlock("oceanstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.stone);
-	public static final RegistryObject<Block> DEEP_OCEANSTONE = registerBlock("deep_oceanstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.stone);
+	public static final RegistryObject<Block> REDROCK = registerBlock("redrock", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.environment);
+	public static final RegistryObject<Block> DEEP_REDROCK = registerBlock("deep_redrock", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.environment);
+	public static final RegistryObject<Block> DEEPSTONE = registerBlock("deepstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.environment);
+	public static final RegistryObject<Block> COLDSTONE = registerBlock("coldstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.environment);
+	public static final RegistryObject<Block> DEEP_COLDSTONE = registerBlock("deep_coldstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.environment);
+	public static final RegistryObject<Block> ICESTONE = registerBlock("icestone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.environment);
+	public static final RegistryObject<Block> GLACIERROCK = registerBlock("glacierrock", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.environment);
+	public static final RegistryObject<Block> OCEANSTONE = registerBlock("oceanstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.environment);
+	public static final RegistryObject<Block> DEEP_OCEANSTONE = registerBlock("deep_oceanstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.environment);
 
 	//Slabs
-	public static final RegistryObject<Block> SLAB_DEEPSTONE = registerBlock("slab_deepstone", () -> new SlabBlock(Block.Properties.create(Material.ROCK)), Reference.stone);
+	public static final RegistryObject<Block> SLAB_DEEPSTONE = registerBlock("slab_deepstone", () -> new SlabBlock(Block.Properties.create(Material.ROCK)), Reference.resource);
 
 	//Ores
-	public static final RegistryObject<Block> ORE_TIN = registerBlock("ore_tin", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.ore);
-	public static final RegistryObject<Block> ORE_TITANIUM = registerBlock("ore_titanium", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.ore);
-	public static final RegistryObject<Block> ORE_COPPER = registerBlock("ore_copper", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.ore);
-	public static final RegistryObject<Block> ORE_MEURODITE = registerBlock("ore_meurodite", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.ore);
-	public static final RegistryObject<Block> ORE_TORITE = registerBlock("ore_torite", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.ore);
-	public static final RegistryObject<Block> ORE_SALT = registerBlock("ore_salt", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.ore);
-	public static final RegistryObject<Block> ORE_IRRADIUM = registerBlock("ore_irradium", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.ore);
-	public static final RegistryObject<Block> ORE_BLAZIUM = registerBlock("ore_blazium", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.ore);
+	public static final RegistryObject<Block> ORE_TIN = registerBlock("ore_tin", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.resource);
+	public static final RegistryObject<Block> ORE_TITANIUM = registerBlock("ore_titanium", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.resource);
+	public static final RegistryObject<Block> ORE_COPPER = registerBlock("ore_copper", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.resource);
+	public static final RegistryObject<Block> ORE_MEURODITE = registerBlock("ore_meurodite", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.resource);
+	public static final RegistryObject<Block> ORE_TORITE = registerBlock("ore_torite", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.resource);
+	public static final RegistryObject<Block> ORE_SALT = registerBlock("ore_salt", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.resource);
+	public static final RegistryObject<Block> ORE_IRRADIUM = registerBlock("ore_irradium", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.resource);
+	public static final RegistryObject<Block> ORE_BLAZIUM = registerBlock("ore_blazium", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.resource);
 
 	public static final RegistryObject<Block> BLAZIUM = registerBlock("block_blazium", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.resource);
 
