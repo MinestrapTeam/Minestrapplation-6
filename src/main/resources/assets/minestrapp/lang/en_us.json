@@ -132,5 +132,19 @@
   "item.minecraft.tipped_arrow.effect.infection": "Arrow of Infection",
 
 
-"itemGroup.Minestrappolation": "Minestrappolation"
+"itemGroup.Minestrappolation": "Minestrappolation",
+"itemGroup.Plants":"Minestrapp Plants",
+"itemGroup.EnvironmentalBlocks":"Minestrapp Environmental Blocks",
+"itemGroup.Wood":"Minestrapp Wood Blocks",
+"itemGroup.Stone":"Minestrapp Stone Blocks",
+"itemGroup.Ores":"Minestrapp Ores",
+"itemGroup.ResourceBlocks":"Minestrapp Resource Blocks",
+"itemGroup.Minerals":"Minestrapp Minerals",
+"itemGroup.Ingredients":"Minestrapp Crafting Ingredients",
+"itemGroup.Food":"Minestrapp Food",
+"itemGroup.Dyeables":"Minestrapp Dyeables",
+"itemGroup.DecorBlocks":"Minestrapp Decorative Blocks",
+"itemGroup.UtilityBlocks":"Minestrapp Utility Blocks",
+"itemGroup.Tools":"=Minestrapp Tools",
+"itemGroup.Combat":"=Minestrapp Combat"
 }
