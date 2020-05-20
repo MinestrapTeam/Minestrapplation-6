@@ -84,22 +84,13 @@ public class MItems {
 
 
 	//Misc
-<<<<<<< HEAD
-	public static final RegistryObject<Item> TALLOW = register("tallow", () -> new Item((new Item.Properties()).group(Reference.minestrapp)));
-	public static final RegistryObject<Item> HEALTH_CONTAINER = register("heart_container", () -> new ItemHealthContainer(new Item.Properties().maxStackSize(1).group(Reference.minestrapp)));
-	public static final RegistryObject<Item> HEALTH_CRYSTAL = register("health_crystal", () -> new ItemHealthCrystal(new Item.Properties().maxStackSize(1).maxDamage(1).group(Reference.minestrapp)));
-	public static final RegistryObject<Item> SMELLING_SALTS = register("smelling_salts", () -> new ItemSmellingSalts(new Item.Properties().maxStackSize(1).maxDamage(1).group(Reference.minestrapp)));
-	public static final RegistryObject<Item> SOUL_GEM = register("gem_soul", () -> new ItemSoulGem(new Item.Properties().maxStackSize(1).maxDamage(1).group(Reference.minestrapp)));
-	public static final RegistryObject<Item> TOTEM_WEATHER = register("totem_of_weather", () -> new ItemTotemWeather(new Item.Properties().maxStackSize(1).maxDamage(1).group(Reference.minestrapp)));
-=======
 	public static final RegistryObject<Item> TALLOW = register("tallow", () -> new Item((new Item.Properties()).group(Reference.resource)));
 	public static final RegistryObject<Item> HEALTH_CONTAINER = register("heart_container", () -> new ItemHealthContainer(new Item.Properties().maxStackSize(1).group(Reference.utility)));
 	public static final RegistryObject<Item> HEALTH_CRYSTAL = register("health_crystal", () -> new ItemHealthCrystal(new Item.Properties().maxStackSize(1).maxDamage(1).group(Reference.utility)));
 	public static final RegistryObject<Item> SMELLING_SALTS = register("smelling_salts", () -> new ItemSmellingSalts(new Item.Properties().maxStackSize(1).maxDamage(1).group(Reference.utility)));
 	public static final RegistryObject<Item> SOUL_GEM = register("gem_soul", () -> new ItemSoulGem(new Item.Properties().maxStackSize(1).maxDamage(1).group(Reference.resource)));
 	public static final RegistryObject<Item> TOTEM_WEATHER = register("totem_of_weather", () -> new ItemTotemWeather(new Item.Properties().maxStackSize(1).maxDamage(1).group(Reference.utility)));
->>>>>>> ad4db1569fb86bbf3d7908dedf5ac0a974b570c6
-	public static final RegistryObject<Item> SOUL_BOTTLE = register("soul_bottle", () -> new ItemSoulBottle(new Item.Properties().group(Reference.minestrapp)));
+	public static final RegistryObject<Item> SOUL_BOTTLE = register("soul_bottle", () -> new ItemSoulBottle(new Item.Properties().group(Reference.utility)));
 
 	public static final RegistryObject<Item> BACKPACK = register("backpack", () -> new ItemBackpack(new Item.Properties().maxStackSize(1).maxDamage(1).group(Reference.utility)));
 
