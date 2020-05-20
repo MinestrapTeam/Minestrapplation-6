@@ -80,12 +80,6 @@ public class TileEntityCandle extends TileEntity {
         return compound;
     }
 
-    public void saveAndSync() {
-        BlockState state = this.world.getBlockState(this.pos);
-        this.world.notifyBlockUpdate(pos, state, state, 3);
-        this.markDirty();
-    }
-
     @Override
     public SUpdateTileEntityPacket getUpdatePacket() {
         return new SUpdateTileEntityPacket (this.getPos(), 0, this.getUpdateTag());
@@ -106,5 +100,9 @@ public class TileEntityCandle extends TileEntity {
         this.read(nbt);
     }
 
-
+    public void saveAndSync() {
+        BlockState state = this.world.getBlockState(this.pos);
+        this.world.notifyBlockUpdate(pos, state, state, 3);
+        this.markDirty();
+    }
 }

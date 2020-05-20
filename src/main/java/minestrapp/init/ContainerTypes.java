@@ -22,6 +22,6 @@ public class ContainerTypes {
     }));
 
     public static final RegistryObject<ContainerType<ContainerBackpack>> BACKPACK_CONTAINER = CONTAINERS.register("backpack", () -> IForgeContainerType.create((windowID, inv, data) -> {
-        return new ContainerBackpack(windowID, inv, new InventoryBackpack(Minestrapp.proxy.getClientPlayer().getHeldItemMainhand(), 20), Minestrapp.proxy.getClientPlayer());
+        return new ContainerBackpack(windowID, inv, new InventoryBackpack(Minestrapp.proxy.getClientPlayer().getHeldItemMainhand(), 20));
     }));
 }

@@ -39,7 +39,7 @@ public class ItemBackpack extends Item implements IDyeableArmorItem {
                 @Nullable
                 @Override
                 public Container createMenu(int id, PlayerInventory inv, PlayerEntity player) {
-                    return new ContainerBackpack(id, inv, new InventoryBackpack(player.getHeldItemMainhand(), 20), player);
+                    return new ContainerBackpack(id, inv, new InventoryBackpack(player.getHeldItemMainhand(), 20));
                 }
             });
         }

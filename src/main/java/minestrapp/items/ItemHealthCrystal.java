@@ -21,7 +21,7 @@ public class ItemHealthCrystal extends Item {
         ItemStack stack = playerIn.getHeldItem(handIn);
         playerIn.addPotionEffect(new EffectInstance(Effects.INSTANT_HEALTH, 1));
 
-        stack.damageItem(1, playerIn, (playerEntity) -> playerIn.sendBreakAnimation(handIn));
+        stack.damageItem(1, playerIn, (PlayerEntity) -> playerIn.sendBreakAnimation(handIn));
 
         return super.onItemRightClick(worldIn, playerIn, handIn);
     }

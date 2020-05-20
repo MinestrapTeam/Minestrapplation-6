@@ -3,7 +3,6 @@ package minestrapp;
 import minestrapp.config.Config;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.player.ClientPlayerEntity;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.CompoundNBT;
@@ -14,7 +13,6 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.EntityViewRenderEvent;
 import net.minecraftforge.client.event.RenderBlockOverlayEvent;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
-import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -32,15 +30,6 @@ public class Events {
              } else {
                  player.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(Config.MAX_STARTING_HEALTH.get());
              }
-        }
-    }
-
-    @SubscribeEvent
-    public static void playerTick(LivingEvent.LivingUpdateEvent e){
-        LivingEntity entity = e.getEntityLiving();
-
-        if(entity instanceof PlayerEntity){
-
         }
     }
 

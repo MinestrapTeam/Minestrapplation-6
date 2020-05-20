@@ -90,6 +90,7 @@ public class MItems {
 	public static final RegistryObject<Item> SMELLING_SALTS = register("smelling_salts", () -> new ItemSmellingSalts(new Item.Properties().maxStackSize(1).maxDamage(1).group(Reference.minestrapp)));
 	public static final RegistryObject<Item> SOUL_GEM = register("gem_soul", () -> new ItemSoulGem(new Item.Properties().maxStackSize(1).maxDamage(1).group(Reference.minestrapp)));
 	public static final RegistryObject<Item> TOTEM_WEATHER = register("totem_of_weather", () -> new ItemTotemWeather(new Item.Properties().maxStackSize(1).maxDamage(1).group(Reference.minestrapp)));
+	public static final RegistryObject<Item> SOUL_BOTTLE = register("soul_bottle", () -> new ItemSoulBottle(new Item.Properties().group(Reference.minestrapp)));
 
 	public static final RegistryObject<Item> BACKPACK = register("backpack", () -> new ItemBackpack(new Item.Properties().maxStackSize(1).maxDamage(1).group(Reference.minestrapp)));
 

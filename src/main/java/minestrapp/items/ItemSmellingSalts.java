@@ -60,11 +60,9 @@ public class ItemSmellingSalts extends Item {
                         potionsToRemove.add(effect.getPotion());
                     }
                 }
-
                 for(Effect effect: potionsToRemove){
                     player.removePotionEffect(effect);
                 }
-
                 if(potionsToRemove.size() > 0){
                     stack.shrink(1);
                 }

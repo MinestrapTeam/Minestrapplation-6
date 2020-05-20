@@ -3,9 +3,11 @@ package minestrapp.containers;
 import minestrapp.containers.inventories.InventoryBackpack;
 import minestrapp.containers.inventories.SlotBackpack;
 import minestrapp.init.ContainerTypes;
+import minestrapp.init.MItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.container.ClickType;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
@@ -16,13 +18,11 @@ import net.minecraftforge.items.wrapper.InvWrapper;
 public class ContainerBackpack extends Container {
 
     private final IInventory backpack;
-    private PlayerEntity player;
     private IItemHandler playerInv;
 
-    public ContainerBackpack(int window, PlayerInventory inv, IInventory backpack, PlayerEntity player){
+    public ContainerBackpack(int window, PlayerInventory inv, IInventory backpack){
         super(ContainerTypes.BACKPACK_CONTAINER.get(), window);
         this.backpack = backpack;
-        this.player = player;
         this.playerInv = new InvWrapper(inv);
 
         for (int j = 0; j < 2; ++j) {
@@ -104,5 +104,14 @@ public class ContainerBackpack extends Container {
         }
 
         return itemstack;
+    }
+
+    @Override
+    public ItemStack slotClick(int slotId, int dragType, ClickType clickTypeIn, PlayerEntity player) {
+        if(slotId >= 0 && this.getSlot(slotId).getStack().getItem() == MItems.BACKPACK.get()){
+            return ItemStack.EMPTY;
+        }
+
+        return super.slotClick(slotId, dragType, clickTypeIn, player);
     }
 }
