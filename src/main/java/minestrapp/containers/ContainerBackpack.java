@@ -70,7 +70,6 @@ public class ContainerBackpack extends Container {
         return true;
     }
 
-    //TODO make shift clicking work correctly
     @Override
     public ItemStack transferStackInSlot(PlayerEntity playerIn, int index) {
         ItemStack itemstack = ItemStack.EMPTY;
@@ -78,15 +77,12 @@ public class ContainerBackpack extends Container {
         if (slot != null && slot.getHasStack()) {
             ItemStack stack = slot.getStack();
             itemstack = stack.copy();
-            if(index != 0 && index != 1 && index != 2){
-               if (index < 28) {
-                    if (!this.mergeItemStack(stack, 28, 37, false)) {
-                        return ItemStack.EMPTY;
-                    }
-                } else if (index < 37 && !this.mergeItemStack(stack, 1, 28, false)) {
+
+            if(index < backpack.getSizeInventory()){
+                if(!this.mergeItemStack(stack, backpack.getSizeInventory(), this.inventorySlots.size(), true)){
                     return ItemStack.EMPTY;
                 }
-            } else if (!this.mergeItemStack(stack, 4, 37, false)) {
+            } else if(!this.mergeItemStack(stack, 0, backpack.getSizeInventory(), false)){
                 return ItemStack.EMPTY;
             }
 

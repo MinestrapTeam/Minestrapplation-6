@@ -1,11 +1,10 @@
 package minestrapp.worldgen;
 
-import minestrapp.init.MBlocks;
 import minestrapp.Minestrapp;
 import minestrapp.config.Config;
+import minestrapp.init.MBlocks;
 import net.minecraft.block.Blocks;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.IFeatureConfig;
@@ -66,13 +65,9 @@ public class OreGen {
     }
 
     public static void setupEndGen(){
-
-        for(Biome biome : ForgeRegistries.BIOMES)
-        {
-            if(biome == Biomes.THE_END || biome == Biomes.END_BARRENS ||biome == Biomes.END_HIGHLANDS || biome == Biomes.END_MIDLANDS || biome == Biomes.SMALL_END_ISLANDS)
-            {
-                if (Config.GEN_DIMENSIUM.get())
-                {
+        for(Biome biome : ForgeRegistries.BIOMES) {
+            if (Config.GEN_DIMENSIUM.get()) {
+                if(biome.getCategory() == Biome.Category.THEEND){
                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.EMERALD_ORE.withConfiguration(
                             new ReplaceBlockConfig(Blocks.END_STONE.getDefaultState(), MBlocks.ORE_DIMENSIUM.get().getDefaultState())).withPlacement(Placement.COUNT_RANGE.configure(
                             new CountRangeConfig(25, 0, 0, 70))));

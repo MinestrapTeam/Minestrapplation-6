@@ -12,6 +12,7 @@ public class SlotBackpack extends Slot {
     }
 
     public boolean isItemValid(ItemStack stack) {
+
         return stack.getItem() != MItems.BACKPACK.get();
     }
 }
