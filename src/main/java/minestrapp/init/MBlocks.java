@@ -53,6 +53,7 @@ public class MBlocks {
 	public static final RegistryObject<Block> ORE_DIMENSIUM = registerBlock("ore_dimensium", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.resource);
 
 	public static final RegistryObject<Block> BLAZIUM = registerBlock("block_blazium", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.resource);
+	public static final RegistryObject<Block> COPPER_BLOCK = registerBlock("block_copper", () -> new BlockCopper(Block.Properties.create(Material.ROCK).tickRandomly().hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.resource);
 
 	//Soil
 	public static final RegistryObject<Block> MUD_DRIED = registerBlock("dried_mud", () -> new BlockDriedMud(Block.Properties.create(Material.EARTH).hardnessAndResistance(0.7F).harvestTool(ToolType.SHOVEL)), Reference.environment);
@@ -90,20 +91,10 @@ public class MBlocks {
 		return object;
 	}
 
-	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<? extends T> block){
-		RegistryObject<T> object = BLOCK_REGISTRY.register(name, block);
-		BLOCK_ITEM_REGISTRY.register(name, registerBlockItem(object));
-		return object;
-	}
-
 	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<? extends T> block, ItemGroup ig){
 		RegistryObject<T> object = BLOCK_REGISTRY.register(name, block);
 		BLOCK_ITEM_REGISTRY.register(name, registerBlockItem(object, ig));
 		return object;
-	}
-
-	private static <T extends Block> Supplier<BlockItem> registerBlockItem(final RegistryObject<T> block){
-		return () -> new BlockItem(block.get(),  new Item.Properties().group(Reference.resource));
 	}
 
 	private static <T extends Block> Supplier<BlockItem> registerBlockItem(final RegistryObject<T> block, ItemGroup ig){

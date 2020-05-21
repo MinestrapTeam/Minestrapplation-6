@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "tarnished=false": { "model": "minestrapp:block/block_copper" },
+    "tarnished=true": { "model": "minestrapp:block/block_copper_tarnished" }
+  }
+}

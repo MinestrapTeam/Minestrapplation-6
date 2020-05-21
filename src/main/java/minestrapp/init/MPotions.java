@@ -13,7 +13,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class MPotions {
 
-
+    //TODO add brewing recipes
 
     public static final DeferredRegister<Potion> POTION_REGISTRY = new DeferredRegister<>(ForgeRegistries.POTION_TYPES, Reference.id);
     public static final DeferredRegister<Effect> EFFECT_REGISTRY = new DeferredRegister<>(ForgeRegistries.POTIONS, Reference.id);
