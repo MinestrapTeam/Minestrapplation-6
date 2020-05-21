@@ -60,6 +60,8 @@ public class MItems {
 	public static final RegistryObject<Item> INGOT_COPPER = register("ingot_copper", () -> new Item((new Item.Properties()).group(Reference.resource)));
 	public static final RegistryObject<Item> GEM_MEURODITE = register("gem_meurodite", () -> new Item((new Item.Properties()).group(Reference.resource)));
 	public static final RegistryObject<Item> INGOT_TORITE = register("ingot_torite", () -> new Item((new Item.Properties()).group(Reference.resource)));
+	public static final RegistryObject<Item> INGOT_DIMENSIUM = register("ingot_dimensium", () -> new Item((new Item.Properties()).group(Reference.resource)));
+
 	public static final RegistryObject<Item> IRRADIUM = register("irradium", () -> new Item((new Item.Properties()).group(Reference.resource)));
 	public static final RegistryObject<Item> CHUNK_REDROCK = register("chunk_redrock", () -> new Item((new Item.Properties().group(Reference.resource))));
 	public static final RegistryObject<Item> CHUNK_STONE = register("chunk_stone", () -> new Item((new Item.Properties().group(Reference.resource))));
@@ -67,6 +69,7 @@ public class MItems {
 	public static final RegistryObject<Item> CHUNK_ICESTONE = register("chunk_icestone", () -> new Item((new Item.Properties().group(Reference.resource))));
 	public static final RegistryObject<Item> CHUNK_OCEANSTONE = register("chunk_oceanstone", () -> new Item((new Item.Properties().group(Reference.resource))));
 	public static final RegistryObject<Item> CHUNK_NETHERRACK = register("chunk_netherrack", () -> new Item((new Item.Properties().group(Reference.resource))));
+	public static final RegistryObject<Item> CHUNK_DIMENSIUM = register("chunk_dimensium", () -> new Item((new Item.Properties().group(Reference.resource))));
 
 	//Food and Seeds
 	public static final RegistryObject<Item> CABBAGE = register("cabbage", () -> new Item((new Item.Properties()).group(Reference.food).food(MFoods.CABBAGE)));

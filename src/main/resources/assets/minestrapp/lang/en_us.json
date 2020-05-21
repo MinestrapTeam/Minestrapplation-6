@@ -19,6 +19,7 @@
   "block.minestrapp.ore_salt": "Salt Ore",
   "block.minestrapp.ore_irradium": "Irradium Ore",
   "block.minestrapp.ore_blazium": "Blazium Ore",
+  "block.minestrapp.ore_dimensium": "Dimensium Ore",
 
   "block.minestrapp.block_blazium": "Blazium",
 
@@ -82,6 +83,7 @@
   "item.minestrapp.ingot_copper": "Copper Ingot",
   "item.minestrapp.gem_meurodite": "Meurodite Gem",
   "item.minestrapp.ingot_torite": "Torite Ingot",
+  "item.minestrapp.ingot_dimensium": "Dimensium Ingot",
   "item.minestrapp.irradium": "Irradium",
   "item.minestrapp.chunk_redrock": "Redrock Chunk",
   "item.minestrapp.chunk_stone": "Stone Chunk",
@@ -89,7 +91,7 @@
   "item.minestrapp.chunk_icestone": "Icestone Chunk",
   "item.minestrapp.chunk_oceanstone": "Oceanstone Chunk",
   "item.minestrapp.chunk_netherrack": "Nether Chunk",
-
+  "item.minestrapp.chunk_dimensium": "Dimensium Chunk",
 
 "item.minestrapp.pepper": "Pepper",
 "item.minestrapp.cabbage": "Cabbage",

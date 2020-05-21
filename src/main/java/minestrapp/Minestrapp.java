@@ -55,5 +55,6 @@ public class Minestrapp {
 	private void setup(final FMLCommonSetupEvent event) {
 		proxy.setup();
 		OreGen.setupOverworldGen();
+		OreGen.setupEndGen();
 	}
 }

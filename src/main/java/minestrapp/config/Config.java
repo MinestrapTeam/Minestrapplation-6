@@ -28,6 +28,8 @@ public class Config {
     public static ForgeConfigSpec.IntValue GEN_COPPER_VEIN_SIZE;
     public static ForgeConfigSpec.BooleanValue GEN_TIN;
     public static ForgeConfigSpec.IntValue GEN_TIN_VEIN_SIZE;
+    public static ForgeConfigSpec.BooleanValue GEN_DIMENSIUM;
+    public static ForgeConfigSpec.IntValue GEN_DIMENSIUM_VEIN_SIZE;
 
     public static ForgeConfigSpec.DoubleValue MAX_STARTING_HEALTH;
 
@@ -42,6 +44,9 @@ public class Config {
         GEN_COPPER_VEIN_SIZE = COMMON_BUILDER.comment("Copper vein size.").defineInRange("copper_vein", 5, 1, 50);
         GEN_TIN = COMMON_BUILDER.comment("Should the world contain tin?").define("tin", true);
         GEN_TIN_VEIN_SIZE = COMMON_BUILDER.comment("Tin vein size.").defineInRange("tin_vein", 5, 1, 50);
+        GEN_DIMENSIUM = COMMON_BUILDER.comment("Should the end contain dimensium?").define("dimensium", true);
+        GEN_DIMENSIUM_VEIN_SIZE = COMMON_BUILDER.comment("Dimensium vein size.").defineInRange("dimensium_vein", 8, 1, 50);
+
         COMMON_BUILDER.pop();
 
         COMMON_CONFIG = COMMON_BUILDER.build();

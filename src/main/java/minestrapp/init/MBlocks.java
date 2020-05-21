@@ -50,6 +50,7 @@ public class MBlocks {
 	public static final RegistryObject<Block> ORE_SALT = registerBlock("ore_salt", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.resource);
 	public static final RegistryObject<Block> ORE_IRRADIUM = registerBlock("ore_irradium", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.resource);
 	public static final RegistryObject<Block> ORE_BLAZIUM = registerBlock("ore_blazium", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.resource);
+	public static final RegistryObject<Block> ORE_DIMENSIUM = registerBlock("ore_dimensium", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.resource);
 
 	public static final RegistryObject<Block> BLAZIUM = registerBlock("block_blazium", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F).harvestTool(ToolType.PICKAXE)), Reference.resource);
 

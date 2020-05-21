@@ -3,11 +3,14 @@ package minestrapp.worldgen;
 import minestrapp.init.MBlocks;
 import minestrapp.Minestrapp;
 import minestrapp.config.Config;
+import net.minecraft.block.Blocks;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.IFeatureConfig;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.world.gen.feature.ReplaceBlockConfig;
 import net.minecraft.world.gen.placement.ChanceConfig;
 import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.Placement;
@@ -60,8 +63,21 @@ public class OreGen {
             //For testing
             biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.DEPOSIT.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.CHANCE_HEIGHTMAP.configure(new ChanceConfig(32))));
         }
+    }
 
+    public static void setupEndGen(){
 
-
+        for(Biome biome : ForgeRegistries.BIOMES)
+        {
+            if(biome == Biomes.THE_END || biome == Biomes.END_BARRENS ||biome == Biomes.END_HIGHLANDS || biome == Biomes.END_MIDLANDS || biome == Biomes.SMALL_END_ISLANDS)
+            {
+                if (Config.GEN_DIMENSIUM.get())
+                {
+                    biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.EMERALD_ORE.withConfiguration(
+                            new ReplaceBlockConfig(Blocks.END_STONE.getDefaultState(), MBlocks.ORE_DIMENSIUM.get().getDefaultState())).withPlacement(Placement.COUNT_RANGE.configure(
+                            new CountRangeConfig(25, 0, 0, 70))));
+                }
+            }
+        }
     }
 }
