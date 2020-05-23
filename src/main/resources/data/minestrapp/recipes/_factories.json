@@ -1,5 +1,6 @@
 {
   "recipes" : {
-    "melter": "minestrapp.recipes.MelterRecipeSerializer"
+    "melter": "minestrapp.recipes.MelterRecipeSerializer",
+    "brickoven": "minestrapp.recipes.BrickOvenRecipeSerializer"
   }
 }

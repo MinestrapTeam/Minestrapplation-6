@@ -40,11 +40,16 @@ public class PotionInfection extends Effect {
 
         if(!world.isRemote && BlockTags.getCollection().get(rl).contains(blockBelow)){
             float mushroomChance = rand.nextFloat();
+            float mushroomTypeChance = rand.nextFloat();
 
             world.setBlockState(posBelow, Blocks.MYCELIUM.getDefaultState(), 2);
 
-            if(mushroomChance >= 0.75F){
-                world.setBlockState(entity.getPosition(), Blocks.RED_MUSHROOM.getDefaultState(), 2);
+            if(mushroomChance >= 0.8F){
+                if(mushroomTypeChance > 0.5F){
+                    world.setBlockState(entity.getPosition(), Blocks.RED_MUSHROOM.getDefaultState(), 2);
+                } else {
+                    world.setBlockState(entity.getPosition(), Blocks.BROWN_MUSHROOM.getDefaultState(), 2);
+                }
             }
         }
 

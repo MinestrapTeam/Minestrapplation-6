@@ -2,6 +2,7 @@ package minestrapp.proxy;
 
 import minestrapp.blocks.BlockCandle;
 import minestrapp.gui.BackpackGui;
+import minestrapp.gui.BrickOvenGui;
 import minestrapp.gui.MelterGui;
 import minestrapp.init.ContainerTypes;
 import minestrapp.init.MBlocks;
@@ -37,6 +38,7 @@ public class ClientProxy extends ServerProxy{
 		RenderTypeLookup.setRenderLayer(MBlocks.CANDLE.get(), RenderType.getCutout());
 
 		ScreenManager.registerFactory(ContainerTypes.MELTER_CONTAINER.get(), MelterGui::new);
+		ScreenManager.registerFactory(ContainerTypes.OVEN_CONTAINER.get(), BrickOvenGui::new);
 		ScreenManager.registerFactory(ContainerTypes.BACKPACK_CONTAINER.get(), BackpackGui::new);
 	}
 

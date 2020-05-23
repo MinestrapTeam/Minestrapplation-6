@@ -4,7 +4,7 @@ import minestrapp.config.Config;
 import minestrapp.init.*;
 import minestrapp.proxy.ClientProxy;
 import minestrapp.proxy.ServerProxy;
-import minestrapp.tileentity.TileEntityTypes;
+import minestrapp.init.TileEntityTypes;
 import minestrapp.worldgen.OreGen;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;

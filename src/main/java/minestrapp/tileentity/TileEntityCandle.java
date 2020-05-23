@@ -1,5 +1,6 @@
 package minestrapp.tileentity;
 
+import minestrapp.init.TileEntityTypes;
 import net.minecraft.block.BlockState;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.NetworkManager;

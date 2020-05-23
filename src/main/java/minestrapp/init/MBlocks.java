@@ -3,6 +3,7 @@ package minestrapp.init;
 import minestrapp.Reference;
 import minestrapp.blocks.*;
 import minestrapp.blocks.crops.*;
+import minestrapp.blocks.machines.BlockBrickOven;
 import minestrapp.blocks.machines.BlockMelter;
 import net.minecraft.block.Block;
 import net.minecraft.block.SlabBlock;
@@ -26,6 +27,7 @@ public class MBlocks {
 
 	//Containers
 	public static final RegistryObject<Block> MELTER = registerBlock("melter", () -> new BlockMelter(Block.Properties.create(Material.ROCK)), Reference.utility);
+	public static final RegistryObject<Block> OVEN = registerBlock("brick_oven", () -> new BlockBrickOven(Block.Properties.create(Material.ROCK)), Reference.utility);
 
 	// Stones
 	public static final RegistryObject<Block> REDROCK = registerBlock("redrock", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.environment);

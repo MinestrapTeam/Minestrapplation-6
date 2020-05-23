@@ -1,0 +1,12 @@
+{
+  "type": "minestrapp:brickoven",
+  "ingredient": {
+    "tag": "minestrapp:meltable_water"
+  },
+  "ingredient2": {
+    "item": "minecraft:stick"
+  },
+  "result": {
+    "item": "minecraft:stick"
+  }
+}
