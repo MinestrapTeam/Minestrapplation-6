@@ -141,5 +141,8 @@
 "itemGroup.DecorBlocks":"Minestrapp Decoration",
 "itemGroup.UtilityBlocks":"Minestrapp Utility",
 "itemGroup.Tools":"Minestrapp Tools",
-"itemGroup.Combat":"Minestrapp Combat"
+"itemGroup.Combat":"Minestrapp Combat",
+
+"item.minestrapp.minestrapp_guide.name":"Minestrappolation Guide",
+"item.minestrapp.minestrapp_guide.landing":"Guide to 'strappolatin"
 }
