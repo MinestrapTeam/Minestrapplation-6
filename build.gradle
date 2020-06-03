@@ -21,6 +21,11 @@ repositories {
     name = "ModMaven"
     url = "https://modmaven.k-4u.nl"
   }
+
+    maven {
+        url = "https://maven.blamejared.com"
+    }
+
 }
 apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
@@ -34,9 +39,8 @@ archivesBaseName = 'minestrapp'
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
 minecraft {
-        mappings channel: 'snapshot', version: '20200225-1.15.1'
+    mappings channel: 'snapshot', version: '20200225-1.15.1'
 
-    
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
     // Default run configurations.
@@ -99,6 +103,9 @@ dependencies {
 
     compileOnly fg.deobf("mezz.jei:jei-1.15.2:6.0.0.2:api")
     runtimeOnly fg.deobf("mezz.jei:jei-1.15.2:6.0.0.2")
+
+    compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.15.2-1.2-32.160:api")
+    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.15.2-1.2-32.160")
 
 compile group: 'org.reflections', name: 'reflections', version: '0.9.12'
 }
