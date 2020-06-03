@@ -1,6 +1,7 @@
 package minestrapp.proxy;
 
 import minestrapp.blocks.BlockCandle;
+import minestrapp.blocks.BlockGoblet;
 import minestrapp.gui.BackpackGui;
 import minestrapp.gui.BrickOvenGui;
 import minestrapp.gui.MelterGui;
@@ -56,6 +57,7 @@ public class ClientProxy extends ServerProxy{
 	@SubscribeEvent
 	public static void registerBlockColorHandler(ColorHandlerEvent.Block event){
 		event.getBlockColors().register(new BlockCandle.ColorHandler(), MBlocks.CANDLE.get());
+		event.getBlockColors().register(new BlockGoblet.ColorHandler(), MBlocks.GOBLET.get());
 	}
 
 	@SubscribeEvent

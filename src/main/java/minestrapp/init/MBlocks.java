@@ -87,6 +87,7 @@ public class MBlocks {
 	public static final RegistryObject<Block> GODSTONE = registerBlock("godstone", () -> new BlockGodstone(Block.Properties.create(Material.EARTH).hardnessAndResistance(1.5F)), Reference.resource);
 	public static final RegistryObject<Block> MITE_HONEY = registerBlock("mite_honey", () -> new BlockMiteHoney(Block.Properties.create(Material.EARTH).hardnessAndResistance(0.7F).harvestTool(ToolType.SHOVEL)), Reference.resource);
 	public static final RegistryObject<Block> CANDLE = registerBlock("candle", () -> new BlockCandle(Block.Properties.create(Material.EARTH)), Reference.decor);
+	public static final RegistryObject<Block> GOBLET = registerBlock("goblet", () -> new BlockGoblet(Block.Properties.create(Material.EARTH)), Reference.decor);
 
 	private static <T extends Block> RegistryObject<T> registerBlockOnly(String name, Supplier<? extends T> block){
 		RegistryObject<T> object = BLOCK_REGISTRY.register(name, block);

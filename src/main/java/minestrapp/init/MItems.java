@@ -85,6 +85,9 @@ public class MItems {
 	public static final RegistryObject<Item> SEEDS_PEPPER = register("pepper_seeds", () -> new BlockNamedItem(MBlocks.CROP_PEPPER.get(), (new Item.Properties()).group(Reference.food)));
 	public static final RegistryObject<Item> SEEDS_TOMATO = register("tomato_seeds", () -> new BlockNamedItem(MBlocks.CROP_TOMATO.get(), (new Item.Properties()).group(Reference.food)));
 
+	//Mob
+	public static final RegistryObject<Item> CREEPER_HEART = register("creeper_heart", () -> new ItemCreeperHeart(new Item.Properties().group(Reference.environment)));
+
 
 	//Misc
 	public static final RegistryObject<Item> TALLOW = register("tallow", () -> new Item((new Item.Properties()).group(Reference.resource)));
