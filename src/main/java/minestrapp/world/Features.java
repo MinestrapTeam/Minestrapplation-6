@@ -1,4 +1,4 @@
-package minestrapp.worldgen;
+package minestrapp.world;
 
 import minestrapp.Reference;
 import net.minecraft.world.gen.feature.Feature;

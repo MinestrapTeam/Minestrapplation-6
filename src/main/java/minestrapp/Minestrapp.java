@@ -5,7 +5,9 @@ import minestrapp.init.*;
 import minestrapp.proxy.ClientProxy;
 import minestrapp.proxy.ServerProxy;
 import minestrapp.init.TileEntityTypes;
-import minestrapp.worldgen.OreGen;
+import minestrapp.world.OreGen;
+import minestrapp.world.WorldGenManager;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -15,6 +17,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.List;
 
 @Mod(Reference.id)
 public class Minestrapp {
@@ -54,6 +58,12 @@ public class Minestrapp {
 
 	private void setup(final FMLCommonSetupEvent event) {
 		proxy.setup();
+		// Register a WorldGenManager for each enabled dimension
+		List<String> dimsIds = Config.STONE_GEN_DIMS.get();
+		for (String dimId : dimsIds) {
+			MinecraftForge.EVENT_BUS.register(new WorldGenManager(Integer.parseInt(dimId)));
+			logger.info("Enabled " + Reference.id + " stone gen for dim " + dimId);
+		}
 		OreGen.setupOverworldGen();
 		OreGen.setupEndGen();
 	}

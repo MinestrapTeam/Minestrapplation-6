@@ -5,6 +5,7 @@ import minestrapp.blocks.*;
 import minestrapp.blocks.crops.*;
 import minestrapp.blocks.machines.BlockBrickOven;
 import minestrapp.blocks.machines.BlockMelter;
+import net.minecraft.block.BedrockBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.material.Material;
@@ -30,15 +31,17 @@ public class MBlocks {
 	public static final RegistryObject<Block> OVEN = registerBlock("brick_oven", () -> new BlockBrickOven(Block.Properties.create(Material.ROCK)), Reference.utility);
 
 	// Stones
-	public static final RegistryObject<Block> REDROCK = registerBlock("redrock", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.environment);
-	public static final RegistryObject<Block> DEEP_REDROCK = registerBlock("deep_redrock", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.environment);
-	public static final RegistryObject<Block> DEEPSTONE = registerBlock("deepstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.environment);
-	public static final RegistryObject<Block> COLDSTONE = registerBlock("coldstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.environment);
-	public static final RegistryObject<Block> DEEP_COLDSTONE = registerBlock("deep_coldstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.environment);
-	public static final RegistryObject<Block> ICESTONE = registerBlock("icestone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.environment);
-	public static final RegistryObject<Block> GLACIERROCK = registerBlock("glacierrock", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.environment);
-	public static final RegistryObject<Block> OCEANSTONE = registerBlock("oceanstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.environment);
-	public static final RegistryObject<Block> DEEP_OCEANSTONE = registerBlock("deep_oceanstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE)), Reference.environment);
+	public static final RegistryObject<Block> INVINCIUM = registerBlock("invincium", () -> new BedrockBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(-1.0F, 3600000.0F).noDrops()), Reference.environment);
+	public static final RegistryObject<Block> REDROCK = registerBlock("redrock", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F).harvestTool(ToolType.PICKAXE)), Reference.environment);
+	public static final RegistryObject<Block> DEEP_REDROCK = registerBlock("deep_redrock", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F).harvestTool(ToolType.PICKAXE)), Reference.environment);
+	public static final RegistryObject<Block> DEEPSTONE = registerBlock("deepstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F).harvestTool(ToolType.PICKAXE)), Reference.environment);
+	public static final RegistryObject<Block> COLDSTONE = registerBlock("coldstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F).harvestTool(ToolType.PICKAXE)), Reference.environment);
+	public static final RegistryObject<Block> DEEP_COLDSTONE = registerBlock("deep_coldstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F).harvestTool(ToolType.PICKAXE)), Reference.environment);
+	public static final RegistryObject<Block> ICESTONE = registerBlock("icestone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F).harvestTool(ToolType.PICKAXE)), Reference.environment);
+	public static final RegistryObject<Block> GLACIERROCK = registerBlock("glacierrock", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F).harvestTool(ToolType.PICKAXE)), Reference.environment);
+	public static final RegistryObject<Block> OCEANSTONE = registerBlock("oceanstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F).harvestTool(ToolType.PICKAXE)), Reference.environment);
+	public static final RegistryObject<Block> DEEP_OCEANSTONE = registerBlock("deep_oceanstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F,6.0F).harvestTool(ToolType.PICKAXE)), Reference.environment);
+	// TODO Add respective cobblestones & drops
 
 	//Slabs
 	public static final RegistryObject<Block> SLAB_DEEPSTONE = registerBlock("slab_deepstone", () -> new SlabBlock(Block.Properties.create(Material.ROCK)), Reference.resource);

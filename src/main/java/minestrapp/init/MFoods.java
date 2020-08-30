@@ -1,4 +1,4 @@
-package minestrapp.items;
+package minestrapp.init;
 
 import net.minecraft.item.Food;
 

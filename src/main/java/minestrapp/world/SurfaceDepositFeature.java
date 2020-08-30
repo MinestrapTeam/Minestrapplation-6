@@ -1,4 +1,4 @@
-package minestrapp.worldgen;
+package minestrapp.world;
 
 import com.mojang.datafixers.Dynamic;
 import minestrapp.init.MBlocks;

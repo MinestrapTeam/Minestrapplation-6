@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "minestrapp:blocks/deep_oceanstone"
+        "all": "minestrapp:blocks/stone/deep_oceanstone"
     }
 }
